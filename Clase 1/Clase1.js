@@ -16,4 +16,3 @@ console.log("La edad de " + NOMBREUSUARIO + " es de " + edadUsuario);
 
 let comida = prompt("¿Cual es tu comida favorita?");
 
-asdasdfa 
