@@ -1,18 +1,18 @@
-// function saludar() {
-//     console.log("¡Hola!")
-// }
-// saludar();
+function saludar() {
+    console.log("¡Hola!")
+}
+saludar();
 
-// function pedirNombre() {
-//     let ingresarNombre = prompt("ingresa tu nombre");
-//     alert("Hola " + ingresarNombre);
-// }
-// // pedirNombre();
+function pedirNombre() {
+    let ingresarNombre = prompt("ingresa tu nombre");
+    alert("Hola " + ingresarNombre);
+}
+// pedirNombre();
 
-// function usandoParametros(parametro1, parametro2, parametro3) { /* "parametro1" aca se llama así, cuanlo lo pongo dentro de usandoParametros(3,"hola",7); se llama argumentos */
-//     console.log(parametro1 + parametro2 + parametro3);
-// }
-// usandoParametros(true, false, true);
+function usandoParametros(parametro1, parametro2, parametro3) { /* "parametro1" aca se llama así, cuanlo lo pongo dentro de usandoParametros(3,"hola",7); se llama argumentos */
+    console.log(parametro1 + parametro2 + parametro3);
+}
+usandoParametros(true, false, true);
 
 
 
