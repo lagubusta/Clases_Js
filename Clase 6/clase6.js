@@ -87,7 +87,7 @@ const arrayMixtoConObjetos = [
 
 //-------------JOIN
 // A todo el array lo arma en un solo string, como que los "concatena".
-const arrayConString = ["Hola", "mundo","como", "va?"];
+const arrayConString = ["Hola", "mundo", "como", "va?"];
 // console.log(arrayConString.join(", "));
 // console.log(arrayConString.join(" "));
 // console.log(arrayConString.join(" Una frase "));
@@ -119,22 +119,46 @@ const arrayConString = ["Hola", "mundo","como", "va?"];
 // console.log(arrayConString.reverse());
 
 // --------------
-const arrayObjetosAgregados = [
-    {nombre: 1, cantidad: 5},
-    {nombre: 2, cantidad: 8},
-];
-arrayObjetosAgregados.push({nombre: "Producto3", cantidad: 2});
-console.log(arrayObjetos);
+// const arrayObjetosAgregados = [
+//     {nombre: 1, cantidad: 5},
+//     {nombre: 2, cantidad: 8},
+// ];
+// arrayObjetosAgregados.push({nombre: "Producto3", cantidad: 2});
+// console.log(arrayObjetos);
 
 // -------------- FOR OF
 // defino una variable y toma los atributos de productos y se los guarda
-const productos = [
-    {id: 1, nombre: "Arroz"},
-    {id: 2, nombre: "Pollo"}
-    {id: 3, nombre: "Carne"}
-]
-for (const index of productos){
-    console.log("El ID es: " + index.id);
-    console.log("El nombre del producto es: " + index.nommbre);
-    
+// const productos = [
+//     {id: 1, nombre: "Arroz"},
+//     {id: 2, nombre: "Pollo"}
+//     {id: 3, nombre: "Carne"}
+// ]
+// for (const index of productos){
+//     console.log("El ID es: " + index.id);
+//     console.log("El nombre del producto es: " + index.nommbre);
+
+// }
+
+class Producto {
+    constructor(nombre, precio, id) {
+        this.nombre = nombre.toUpperCase();
+        this.precio = parseFloat(precio);
+        this.id = id;
+        
+        sumarIva(){
+            this.precio = this.precio * 1.21;
+        }
+    }
+
+
+const carrito = [];
+
+console.log(carrito);
+carrito.push(new Producto(1,"Yerba", 1000.5));
+carrito.push(new Producto(2,"Azucar", 1200));
+carrito.push(new Producto(3,"Matambre", 200));
+console.log(carrito);
+
+for (const porCadaProdcuto of carrito){
+    carrito.sumarIVA();
 }
