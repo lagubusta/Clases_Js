@@ -71,3 +71,5 @@ function Estudiante (nombre, edad, curso){
 }
 const estudiante = new Estudiante ("Alejandro", 35, "1 A");
 console.log (Estudiante.Alejandro);
+
+console.log ("Agustin lista");
