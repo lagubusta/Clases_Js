@@ -36,10 +36,37 @@
 
 // Hasta que no ingrese la palabra "clave" no va a imprimir el alert. Especie de "contraseña".
 
-let entrada = prompt("Ingresa nombre");
-let ingresados ="";
-while (entrada != "Agus"){
-    ingresados += entrada + "\n";
-    entrada = prompt("Ingresa nombre");
-}
-alert (ingresados);
+// let entrada = prompt("Ingresa nombre");
+// let ingresados ="";
+// while (entrada != "Agus"){
+//     ingresados += entrada + "\n";
+//     entrada = prompt("Ingresa nombre");
+// }
+// alert (ingresados);
+
+
+// ----------------------ACTIVIDAD 5
+// Solicitar al usuario un (1) número de forma consecutiva, hasta que se ingrese “ESC”. Generar una única salida compuesta por los siguientes productos, según el valor ingresado en cada ciclo:
+// “Tomate” si es 1.
+// “Papa” si es 2.
+// “Carne” si es 3.
+// “Pollo” si es 4.
+
+// let nro = prompt("Ingresa producto del numero 1 al 4");
+// while (nro != "ESC"){
+//     switch (nro){
+//         case "1":
+//             alert("Tomate");
+//             break;
+//         case "2":
+//             alert("Papa");
+//             break;
+//             case "3":
+//                 alert("Carne");
+//                 break;
+//             case "4":
+//                 alert("Pollo");
+//                 break;
+//     }
+//     nro = prompt("Ingresa producto del numero 1 al 4");
+// }
