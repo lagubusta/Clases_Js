@@ -1,7 +1,70 @@
-//---------------------- Objetos Constructores y Constructor y New----------------------
+//------------------------------ Ejercicios Avanzados de JavaScript con Objetos y Clases------------------------------
 
-//---------------------- Crea un constructor llamado Producto con las propiedades nombre, precio y cantidad. Crea un objeto nuevo utilizando este constructor.
+//-----------------------------------Objetos y Obtener Valores
 
+// 1- Crea un objeto llamado persona con las propiedades nombre, edad y ciudad. Imprime en la consola el nombre de la persona.
+//-I----------------forma 1.1
+// Se completa aplicando una por una cada variable.
+
+// let nombre ="Agustin";
+// let edad = 31;
+// let ciudad = "Bs As"
+
+// console.log(nombre);
+// IMPRIME: el valor que le haya puesto a nombre.
+
+//---F----------------forma 1.1
+//-I----------------forma 1.2
+// Se crea una constante para persona.
+// Uso key (sería nombre)
+// :
+// value, ("Agustin") MUCHO MUY IMPORTANTE SE DIVIDEN CON ","
+// const persona = {
+//     nombre: "Agustin",
+//     edad: 31,
+//     ciudad: "Bs As",
+// };
+// console.log(persona.nombre);
+// -F----------------forma 1.2
+
+// 2- Agrega una propiedad telefono al objeto persona y asigna un número de teléfono. Luego, imprime en la consola el teléfono.
+
+// -I----------------forma 2.1
+//usando la key . "nuevo value" puedo agregar una nueva key
+// persona.telefeno = 156493;
+// Esta nueva key y su valor se "agregan" a las propiedades ya creadas
+// console.log(persona.telefeno);
+// console.log(persona);
+// -F----------------forma 2.1
+
+// 3- Crea un objeto llamado coche con las propiedades marca, modelo y año. Imprime en la consola el modelo del coche.
+
+// -I----------------forma 3.1
+// const coche = {
+//     marca: "Audio",
+//     modelo: "TT",
+//     anio: 2024,
+// }
+// console.log (coche.modelo);
+// -F----------------forma 3.1
+
+// 4- Agrega una propiedad color al objeto coche y asigna un color. Luego, imprime en la consola el color.
+
+// -I----------------forma 4.1
+// coche.color = "Blanco";
+// console.log (coche.color);
+// -F----------------forma 4.1
+
+//-----------------------------------Objetos Constructores y Constructor y New
+
+// 5- Crea un constructor llamado Producto con las propiedades nombre, precio y cantidad. Crea un objeto nuevo utilizando este constructor.
+
+// De esta manera creo un nuevo "constructor".
+// Pongo "function" + "key" + ("el nombre que va a llevar cada value") {
+// Dentro de las llave pongo this. + ("el nombre que va a llevar cada value") = ("el nombre que va a llevar cada value")
+
+// esto va a hacer que cada vez que sllame a Producto.nombre me muestre la asignación que le di.
+//}
 function Producto(nombre, precio, cantidad) {
     this.nombre = nombre;
     this.precio = precio;
