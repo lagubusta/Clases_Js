@@ -144,11 +144,12 @@ class Producto {
         this.nombre = nombre.toUpperCase();
         this.precio = parseFloat(precio);
         this.id = id;
-        
-        sumarIva(){
+}        
+        sumarIva () {
             this.precio = this.precio * 1.21;
-        }
-    }
+}
+}
+
 
 
 const carrito = [];
