@@ -97,7 +97,7 @@ const arrayConString = ["Hola", "mundo", "como", "va?"];
 
 //----------- SLICE
 
-// Voy a contruir o generar un nuevo array, en este caso solo contiene el "mundo". Desde la posicion 1 hasta la posicion 2.
+// Voy a construir o generar un nuevo array, en este caso solo contiene el "mundo". Desde la posicion 1 hasta la posicion 2.
 // const nuevoArrayConString = arrayConString.slice(1, 2);
 // console.log(nuevoArrayConString);
 
