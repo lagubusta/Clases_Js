@@ -48,14 +48,55 @@
 // alert(resultado);
 // }
 
-// ----------------------ACTIVIDAD 3
+// ----------------------ACTIVIDAD 4
 
 // Codificar dos funciones:
 // A- Una función cotizarDolar(pesos), la cual recibe un valor monetario en pesos argentinos, y lo retorna en su equivalente en dólares.
+// B- Una función cotizarPesos(dolar), que recibe un valor monetario en dólares, y lo retorna en su equivalente en pesos argentinos.
+// C- Luego invocar las funciones solicitando  al usuario el valor y el tipo de cotización a realizar.
+
+
+//---------------------- MI FORMA
 // function cotizarDolar (){
 //     return
 // }
+// function cotizador() {
+//     return peso * dolar;
+// }
+// let dolar = prompt("Ingresa el valor en usd: ");
+// let peso = prompt("Ingresa el valor en pesos: ");
 
-// B- Una función cotizarPesos(dolar), que recibe un valor monetario en dólares, y lo retorna en su equivalente en pesos argentinos.
+// let total = cotizador();
+// console.log(total);
 
-// C- Luego invocar las funciones solicitando  al usuario el valor y el tipo de cotización a realizar.
+
+//---------------------- SOLUCION DIAPO
+// const COTIZACION_DOLAR = 150;
+// const cotizarDolar = (pesos) => pesos / COTIZACION_DOLAR;
+// const cotizarPesos = (dolar) => dolar * COTIZACION_DOLAR;
+// let seleccion = prompt("SELECCIONAR COTIZACION \n 1- DOLARES A PESOS \n 2- PESOS A DOLAR ");
+// let valor = prompt("VALOR");
+// switch (seleccion) {
+//     case "1":
+//         alert(cotizarPesos(valor));
+//         break;
+//     case "2":
+//         alert: (cotizarDolar(valor));
+//         break;
+//     default:
+//         break;
+// }
+
+// ----------------------ACTIVIDAD 5
+
+// Codificar una función con la siguiente cabecera: validacion(cadena). En ella, se retorna un valor booleano, el cual es true si el parámetro no es un cadena vacía. Caso contrario, se retorna false.
+//Luego invocar la función de forma iterativa, hasta que el usuario tipee “ESC”, solicitando en cada ciclo una cadena a validar.
+
+// function validacion(cadena){
+//     return cadena != ""; 
+// }
+// let entrada = prompt("Ingresar cadena");
+// while (entrada != "ESC"){
+//     alert (validacion(entrada));
+//     entrada = prompt ("Ingresar cadena");
+// }
