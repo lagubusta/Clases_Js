@@ -12,28 +12,28 @@
 // se "busca" así
 // console.log(arrayNumerico[3]);
 
-const arrayVacio = [];
+// const arrayVacio = [];
 // Array no se puede remplazar con otro tipo de dato.
 
-const arrayNumerico = [1, 2, 3, 4, 5]; // Tipo numerico.
+// const arrayNumerico = [1, 2, 3, 4, 5]; // Tipo numerico.
 
-const arrayConLetras = ['a', 'b', 'c',] // tipo caracter se completa con ' '.
+// const arrayConLetras = ['a', 'b', 'c',] // tipo caracter se completa con ' '.
 
 // const arrayConString = ["Hola", "mundo","como", "estas?"]; //Tipo String se completa con "".
 
-const arrayBooleano = [true, false, true]; // Tipo booleano.
+// const arrayBooleano = [true, false, true]; // Tipo booleano.
 
-const arrayMixto = ["a", 'Hola', 2] //tipo mixto.
-const arrayObjetos = [
-    { nombre: "Productos1", cantidad: 8 },
-    { nombre: "Productos2", cantidad: 9 }
-] // Tipo Objetos
+// const arrayMixto = ["a", 'Hola', 2] //tipo mixto.
+// const arrayObjetos = [
+    // { nombre: "Productos1", cantidad: 8 },
+    // { nombre: "Productos2", cantidad: 9 }
+//] // Tipo Objetos
 
-const arrayMixtoConObjetos = [
-    "a", 'Hola', 2,
-    { nombre: "Productos1", cantidad: 8 },
+// const arrayMixtoConObjetos = [
+    // "a", 'Hola', 2,
+    // { nombre: "Productos1", cantidad: 8 },
 
-] // tipo mixto con objetos.
+//] // tipo mixto con objetos.
 
 // console.log(arrayNumerico[3]);
 
@@ -87,7 +87,7 @@ const arrayMixtoConObjetos = [
 
 //-------------JOIN
 // A todo el array lo arma en un solo string, como que los "concatena".
-const arrayConString = ["Hola", "mundo", "como", "va?"];
+// const arrayConString = ["Hola", "mundo", "como", "va?"];
 // console.log(arrayConString.join(", "));
 // console.log(arrayConString.join(" "));
 // console.log(arrayConString.join(" Una frase "));
@@ -139,27 +139,57 @@ const arrayConString = ["Hola", "mundo", "como", "va?"];
 
 // }
 
-class Producto {
-    constructor(nombre, precio, id) {
-        this.nombre = nombre.toUpperCase();
-        this.precio = parseFloat(precio);
-        this.id = id;
-}        
-        sumarIva () {
-            this.precio = this.precio * 1.21;
+// class Producto {
+//     constructor(nombre, precio, id) {
+//         this.nombre = nombre.toUpperCase();
+//         this.precio = parseFloat(precio);
+//         this.id = id;
+// }        
+//         sumarIva () {
+//             this.precio = this.precio * 1.21;
+// }
+// }
+
+
+
+// const carrito = [];
+
+// console.log(carrito);
+// carrito.push(new Producto(1,"Yerba", 1000.5));
+// carrito.push(new Producto(2,"Azucar", 1200));
+// carrito.push(new Producto(3,"Matambre", 200));
+// console.log(carrito);
+
+// for (const porCadaProdcuto of carrito){
+//     carrito.sumarIVA();
+// }
+
+
+
+// --------------------------------------------------------------
+                // EJERECICIOS CLASE 6
+                // Ejercicios Integrados de JavaScript con Objetos, Clases y Arrays
+// --------------------------------------------------------------
+
+//----------------- Objetos y Obtener Valores con Arrays
+
+// A- Crea un array de objetos llamado personas, donde cada objeto represente a una persona con las propiedades nombre, edad y ciudad. Imprime en la consola el nombre de la primera persona del array.
+
+//B - Agrega un nuevo objeto al array personas que represente a otra persona con las mismas propiedades. Luego, imprime en la consola la edad de la segunda persona del array.
+
+//C - Crea un array de objetos llamado autos, donde cada objeto represente un automóvil con las propiedades marca, modelo y anio. Imprime en la consola el modelo del segundo auto del array.
+
+//D - Agrega un nuevo objeto al array autos que represente otro automóvil con las mismas propiedades. Luego, imprime en la consola el año del último auto del array.
+
+class caractPersonas{
+    constructor (nombre, edad,ciudad) {
+        this.nombre = nombre;
+        this.edad = parseInt(edad);
+        this.ciudad = ciudad;
+    }
 }
-}
 
+const personas = [];
+personas.push(new personas = "Agustin", 30, "San Isidro");
 
-
-const carrito = [];
-
-console.log(carrito);
-carrito.push(new Producto(1,"Yerba", 1000.5));
-carrito.push(new Producto(2,"Azucar", 1200));
-carrito.push(new Producto(3,"Matambre", 200));
-console.log(carrito);
-
-for (const porCadaProdcuto of carrito){
-    carrito.sumarIVA();
-}
+console.log(personas);
