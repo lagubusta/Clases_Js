@@ -3,27 +3,33 @@
 ## Conceptos Generales Sintaxis y Variables.
 
 ## VARIABLES 
-- SE ESCRIBREN EN minuscula
+- Se escribe en __minuscula__.
 -Variables: Algo que puede cambiar.
     Pueden ser numericas o alfanumericas (string, cadena de texto).
 - Para usarla tengo que hacer una declaración y una asignación.
 Puede no ser inmediata.
 
 ### De manera inmediata:
-    //  declaración = asignacion;
+
+    __declaración = asignacion;__
     let palabra = "Hola";
+
 ### Declaración:
+
     let palabra;
     *
     mas codigo.
     *
+
 ### Asignación:
+
     *
     mas codigo.
     *
     palabra = "Hola";
 
 ### Reasignación:
+
     palabra = "Como estas?";
 
 Puedo declarar una variable y usarla cuando yo necesite, una vez que la vaya a usar le hago la asignación.
@@ -48,5 +54,6 @@ Puede no ser inmediata.
     const CODER = "CoderHouse";
 
 - A diferencia de las variables es que no pueden ser modificados. No puedo hacer reasignación.
+
     CODER = "En coder se estudia"
-        _Esto va a indicar error._
+    _Esto va a indicar error._
