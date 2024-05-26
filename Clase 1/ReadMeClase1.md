@@ -1,24 +1,26 @@
 # CLASE 1
+
 ## Conceptos Generales Sintaxis y Variables.
 
-
+## VARIABLES 
+- SE ESCRIBREN EN minuscula
 -Variables: Algo que puede cambiar.
     Pueden ser numericas o alfanumericas (string, cadena de texto).
--Constante: Algo que queda fijo y que no cambia.
-    
-    Ambos son datos que quedan guardados en la memoria.
-
-Para trabajar con alguno de los dos tengo que declararlos y asignarles un valor.
-La asignación de tiene que ser si o si inmediata. 
-
-## VARIABLES 
+- Para usarla tengo que hacer una declaración y una asignación.
+Puede no ser inmediata.
 
 ### De manera inmediata:
     //  declaración = asignacion;
     let palabra = "Hola";
 ### Declaración:
     let palabra;
+    *
+    mas codigo.
+    *
 ### Asignación:
+    *
+    mas codigo.
+    *
     palabra = "Hola";
 
 ### Reasignación:
@@ -35,3 +37,16 @@ Hay palabras reservadas tanto para variables como para constantes.
 
     break, case, catch, continue, default, let, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with, y varias mas.
 
+## CONSTANTES
+
+- Se escriben en MAYUSCULA.
+-Constante: Algo que queda fijo y que no cambia.
+    Pueden ser numericas o alfanumericas (string, cadena de texto).
+- Para usarla tengo que hacer una declaración y una asignación.
+Puede no ser inmediata.
+
+    const CODER = "CoderHouse";
+
+- A diferencia de las variables es que no pueden ser modificados. No puedo hacer reasignación.
+    CODER = "En coder se estudia"
+        _Esto va a indicar error.
