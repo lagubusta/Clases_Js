@@ -4,12 +4,12 @@
 
 ## Como aplicar el script a un html
 - En el index.html se tiene que escribir el script así:
-    <body>
+    < body>
         *
         más código.
         *
-        <script src="./Clase 5/clase5.js"></script>
-    </body>
+        < script src="./Clase 5/clase5.js"></ script>
+    </ body>
 
 - Tiene que ir por encima de la etiqueta de cierre del body.
 - Puedo usar la cantidad de script JS que crean necesario.
@@ -111,20 +111,20 @@ __declaracion = ASIGNACION;__
 
 - En la constante RESULTADO puedo poner cualquir operación (+ - * /).
 
-    let a = 1;
-    let b = 2;
+    - let a = 1;
+    - let b = 2;
 
-    const RESULTADO = a + b;
-    console.log (RESULTADO); 
+    - const RESULTADO = a + b;
+    - console.log (RESULTADO); 
 _va a imprimir en pantalla "3"_
 
 ### Concatenación
 
-    let primerNombre = "Agustín";
-    let segundoNombre = "Bustamante";
+    -let primerNombre = "Agustín";
+    -let segundoNombre = "Bustamante";
 
-    const NOMBRE_COMPLETO = primerNombre + " " + segundoNombre;
-    console.log(NOMBRE_COMPLETO);
+    -const NOMBRE_COMPLETO = primerNombre + " " + segundoNombre;
+    -console.log(NOMBRE_COMPLETO);
 _va a imprimir en pantalla "Agustín Bustamante"_
 
 
@@ -132,18 +132,18 @@ _va a imprimir en pantalla "Agustín Bustamante"_
 - Es un metodo o función propia de JS.
 - La sentencia _prompt()_ mostrará un cuadro de diálogo para que el usuario ingres un dato. Se puede proporcionar un mensaje que se clolocará sobre el campo de texto. El valor que devuelve es una cadena que represente lo que el usuario ingresó.
 
-    let nombreIngresado = prompt("Ingrese su nombre");
-    console.log(nombreIngresado); _va a imprimir en pantalla lo que el usuario haya ingresado_
+    - let nombreIngresado = prompt("Ingrese su nombre");
+    - console.log(nombreIngresado); _va a imprimir en pantalla lo que el usuario haya ingresado_
 
 
 - En caso que el usuario no ingrese ningun dato en el prompt:
 
-    let nombreIngresado = prompt("Ingrese su nombre");
-    console.log(nombreIngresado); _va a imprimir en pantalla null. Significa que no hay nada, no hay valor._
+    - let nombreIngresado = prompt("Ingrese su nombre");
+    - console.log(nombreIngresado); _va a imprimir en pantalla null. Significa que no hay nada, no hay valor._
 
 ## Alert
 - Es un metodo o función propia de JS.
 - La sentencia alert() mostrará una ventana sobre la página web que estamos accediendo mostrando un mensaje que se pase como parámetro a la llamada.
 
-    alert("¡Hola!);
+    -alert("¡Hola!);
     _va a mostrar una alerta que diga "¡Hola!"._
