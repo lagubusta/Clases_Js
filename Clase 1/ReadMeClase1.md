@@ -49,4 +49,4 @@ Puede no ser inmediata.
 
 - A diferencia de las variables es que no pueden ser modificados. No puedo hacer reasignación.
     CODER = "En coder se estudia"
-        _Esto va a indicar error.
+        _Esto va a indicar error._
