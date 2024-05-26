@@ -1,12 +1,8 @@
-// for (desde ; hasta ; actualizacion)
+let nombre = "Agustin";
 
-// let a;
-// a = 0; 
-// console.log (a);
-// a = a + 1;
-// console.log (a);
-
-
-for (let i = 0; i < 10; i = i + 1) {
-    console.log(i);
+for(let i = 1; i< 10;i++){
+    if(i == 5){
+        console.log( i + " vuelta del " + nombre);
+        break;
+    }
 }
