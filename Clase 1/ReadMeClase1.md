@@ -4,14 +4,15 @@
 
 ## VARIABLES 
 - Se escribe en __minuscula__.
--Variables: Algo que puede cambiar.
-    Pueden ser numericas o alfanumericas (string, cadena de texto).
+- Todo lo que son variables lo asigno con: __let__.
+- Variables: Algo que puede cambiar, pueden ser numericas o alfanumericas (string, cadena de texto).
 - Para usarla tengo que hacer una declaración y una asignación.
 Puede no ser inmediata.
 
+- Puedo declarar una variable y usarla de manera inmediata o usarla cuando lo necesite.
 ### De manera inmediata:
 
-    __declaración = asignacion;__
+__declaración = asignacion;__
     let palabra = "Hola";
 
 ### Declaración:
@@ -29,25 +30,20 @@ Puede no ser inmediata.
     palabra = "Hola";
 
 ### Reasignación:
+- Se pueden hacer reasignaciones. 
 
     palabra = "Como estas?";
 
-Puedo declarar una variable y usarla cuando yo necesite, una vez que la vaya a usar le hago la asignación.
-Se pueden hacer reasignaciones.
-
-Todo lo que son variables lo asigno con: let
-Todo lo que son constantes lo asigno con: const
-
 ### Sintaxis
-Hay palabras reservadas tanto para variables como para constantes.
+- Hay palabras reservadas tanto para variables como para constantes.
 
-    break, case, catch, continue, default, let, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with, y varias mas.
+    _break, case, catch, continue, default, let, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with, y varias mas._
 
 ## CONSTANTES
 
 - Se escriben en MAYUSCULA.
--Constante: Algo que queda fijo y que no cambia.
-    Pueden ser numericas o alfanumericas (string, cadena de texto).
+- Todo lo que son constantes lo asigno con: __const__.
+- __Constante__: Algo que queda fijo y que no cambia, pueden ser numericas o alfanumericas (string, cadena de texto).
 - Para usarla tengo que hacer una declaración y una asignación.
 Puede no ser inmediata.
 
