@@ -103,19 +103,19 @@ __declaracion = ASIGNACION;__
 
 - Cuando es nuemro va a aparecer en color violeta en la consola.
 
-    - let numero1 = 200 _es un numero entero_
-    - let numero2 = 20.5 _es un Float_
-    - const NUMERO = 300
+    -let numero1 = 200; _es un numero entero_
+    -let numero2 = 20.5; _es un Float_
+    -const NUMERO = 300;
 
 ### Operaciones básicas.
 
 - En la constante RESULTADO puedo poner cualquir operación (+ - * /).
 
-    - let a = 1;
-    - let b = 2;
+    -let a = 1;
+    -let b = 2;
 
-    - const RESULTADO = a + b;
-    - console.log (RESULTADO); 
+    -const RESULTADO = a + b;
+    -console.log (RESULTADO); 
 _va a imprimir en pantalla "3"_
 
 ### Concatenación
@@ -132,14 +132,14 @@ _va a imprimir en pantalla "Agustín Bustamante"_
 - Es un metodo o función propia de JS.
 - La sentencia _prompt()_ mostrará un cuadro de diálogo para que el usuario ingres un dato. Se puede proporcionar un mensaje que se clolocará sobre el campo de texto. El valor que devuelve es una cadena que represente lo que el usuario ingresó.
 
-    - let nombreIngresado = prompt("Ingrese su nombre");
-    - console.log(nombreIngresado); _va a imprimir en pantalla lo que el usuario haya ingresado_
+    -let nombreIngresado = prompt("Ingrese su nombre");
+    -console.log(nombreIngresado); _va a imprimir en pantalla lo que el usuario haya ingresado_
 
 
 - En caso que el usuario no ingrese ningun dato en el prompt:
 
-    - let nombreIngresado = prompt("Ingrese su nombre");
-    - console.log(nombreIngresado); _va a imprimir en pantalla null. Significa que no hay nada, no hay valor._
+    -let nombreIngresado = prompt("Ingrese su nombre");
+    -console.log(nombreIngresado); _va a imprimir en pantalla null. Significa que no hay nada, no hay valor._
 
 ## Alert
 - Es un metodo o función propia de JS.
