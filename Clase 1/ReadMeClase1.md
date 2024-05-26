@@ -146,4 +146,4 @@ _va a imprimir en pantalla "Agustín Bustamante"_
 - La sentencia alert() mostrará una ventana sobre la página web que estamos accediendo mostrando un mensaje que se pase como parámetro a la llamada.
 
     -alert("¡Hola!);
-    _va a mostrar una alerta que diga "¡Hola!"._
+    _va a mostrar una alerta que diga "¡Hola!"_
