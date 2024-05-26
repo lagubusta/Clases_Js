@@ -1,5 +1,17 @@
 // Ejercicios Básicos de JavaScript
 
+
+
+
+
+
+
+
+
+
+
+
+
 //------------ Variables y Constantes ------------
 // Declara una variable llamada nombre y asígnale tu nombre.
 // Declara una constante llamada PI y asígnale el valor de π (pi).
@@ -61,36 +73,36 @@
 // else if (edadUsuario == 100) {
 //     console.log("El valor ingresado es igual a 100.");
 // }
-else if (edadUsuario < 100) {
-    console.log("El valor ingresado es menor a 100");
-}
+// else if (edadUsuario < 100) {
+//     console.log("El valor ingresado es menor a 100");
+// }
 
------------- Operadores Lógicos ------------
-Utilizando operadores lógicos, verifica si un número ingresado por el usuario es divisible tanto por 2 como por 3.
-if (edadUsuario % 2 === 0 && edadUsuario % 3 === 0) {
-    console.log(edadUsuario + " Es divisible tanto por 2 como por 3.");
-}
-else {
-    console.log(" No es divisible por 2 y 3");
-}
-
-
-Utilizando operadores lógicos, verifica si un número ingresado por el usuario es mayor que 0 y menor que 100.
-if (edadUsuario > 0 && edadUsuario < 100) {
-    console.log("El numero esta entre 0 y 100");
-}
-    else {
-        console.log ("El numero " + edadUsuario + " no esta entre 0 y 100")
-    }
+// ------------ Operadores Lógicos ------------
+// Utilizando operadores lógicos, verifica si un número ingresado por el usuario es divisible tanto por 2 como por 3.
+// if (edadUsuario % 2 === 0 && edadUsuario % 3 === 0) {
+//     console.log(edadUsuario + " Es divisible tanto por 2 como por 3.");
+// }
+// else {
+//     console.log(" No es divisible por 2 y 3");
+// }
 
 
-Utilizando operadores lógicos, verifica si un número ingresado por el usuario es mayor que 10 o menor que -10.
-if (edadUsuario > 10 || edadUsuario < -10) {
-    console.log("El numero ingresado es mayor a 10 o menor que -10");
-}
-    else {
-        console.log ("El numero ingresado NO es mayor a 10 o menor que -10")
-   }
+// Utilizando operadores lógicos, verifica si un número ingresado por el usuario es mayor que 0 y menor que 100.
+// if (edadUsuario > 0 && edadUsuario < 100) {
+//     console.log("El numero esta entre 0 y 100");
+// }
+//     else {
+//         console.log ("El numero " + edadUsuario + " no esta entre 0 y 100")
+//     }
+
+
+// Utilizando operadores lógicos, verifica si un número ingresado por el usuario es mayor que 10 o menor que -10.
+// if (edadUsuario > 10 || edadUsuario < -10) {
+//     console.log("El numero ingresado es mayor a 10 o menor que -10");
+// }
+//     else {
+//         console.log ("El numero ingresado NO es mayor a 10 o menor que -10")
+//    }
 
 
 
@@ -145,3 +157,8 @@ if (edadUsuario > 10 || edadUsuario < -10) {
 // Pide al usuario que ingrese su nombre utilizando prompt, luego verifica si comienza con la letra "A" o "a" e imprime un mensaje correspondiente.
 // Declara una variable llamada temperatura y asígnale un valor numérico que represente la temperatura actual. Luego, utilizando un if, imprime un mensaje que indique si hace frío, templado o caliente.
 // Pide al usuario que ingrese tres números utilizando prompt, luego verifica si la suma de los dos primeros números es igual al tercer número e imprime un mensaje correspondiente.
+
+
+
+
+

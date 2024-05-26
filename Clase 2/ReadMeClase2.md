@@ -88,10 +88,10 @@ Es una condición dentro de otra condición
 - El console.log() que se va a mostra es el __(*A*)__ ya que la sentencia del __(*B*)__ esta debajo. Para que quede de manera correcta el código, la sentencia de __(*B*)__ debería ir por encima de la sentencia de __(*A*)__.
 ---
 
-# Operadores
+# Operadores en Java Script
+
 Asignación:
     =
-
 Es igual:
     ==
 Es estrictamente igual:
@@ -115,11 +115,74 @@ Operador not (no):
 
     if (edad >= 18){
         console.log("Mayor de edad");
-    } else if( __0 < edad && edad < 18__){
+    } else if( __0 <= edad && edad < 18__){
         console.log("Menor de edad");
     } else {
         console.log("Valor no valido");
     }
 
+    - Se usa el _&&_ para decir si edad es menor a 0 __Y__ edad menor a de 18.
 
-quedoen minutor 46:13
+## Valores Booleanos
+
+- Los valores Booleanos son _true_ or _false_
+    let unaVariable = 1;
+    console.log(unaVariable > 0); 
+    _va a mostrar en pantalla true_
+
+- Armar una tabla de verdad:
+
+const V = true;
+const F = false;
+
+- Tabla de Verdad operador && (y):
+
+    console.log(V && F); _true_
+    console.log(V && F); _false_
+    console.log(F && V); _false_
+    console.log(F && F); _false_
+
+- Tabla de Verdad operador || (o):
+
+    console.log(V || F); _true_
+    console.log(V || F); _true_
+    console.log(F || V); _true_
+    console.log(F || F); _false_
+
+- Tabla de Verdad de la ! Negación:
+    console.log(!V); _false_
+    console.log(!F); _true_
+
+---
+
+Ejemplo de como se aplica:
+
+En el ejemplo a continuación pide que se ingrese nombre y apelldio en dos prompts diferentes. Si los dos son datos valido va a mostrar el primer prompt. Si alguno esta vació va a mostrar el segundo console.log().
+
+    let ingreseNombre = prompt("Ingrese su nombre");
+    let ingreseApellido = prompt("Ingrese su Apellido");
+    let ingreseApellido = prompt("Ingrese su Edad);
+    const VACIO = "";
+
+    if(ingreseNombre _!=_ VACIO _&&_ ingreseApellido _!=_ VACIO){
+        alert("Su nombre es " + ingreseNombre + " y el apellido es " + ingreseApellido);
+    } else {
+        alert("falta información");
+    }
+    
+- Ahora agregamos una nueva condición dentro de la condición. Mediante un prompt va a pedir ingresar la edad siempre y cuando primera condición sea true
+
+if(ingreseNombre _!=_ VACIO _&&_ ingreseApellido _!=_ VACIO){
+        if ingreseEdad != VACIO{
+            alert("Su nombre es " + ingreseNombre + " y el apellido es " + ingreseApellido + " y tiene " + ingrese su edad);
+        } else {
+        alert("Su nombre es " + ingreseNombre + " y el apellido es " + ingreseApellido);
+        }
+    } else {
+        alert("falta información");
+    }
+
+- El operador _&&_ del ejemplo anterior puede ser cualquier operador de JS.
+
+### ESTO SE PUEDE USAR PARA UN LOGIN.
+
