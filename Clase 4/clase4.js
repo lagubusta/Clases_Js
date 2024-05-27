@@ -1,7 +1,16 @@
-function saludar(){
-    console.log("Hola.");
-}
-saludar();
+const iva = x => x * 0.21;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
