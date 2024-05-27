@@ -1,4 +1,4 @@
-# CLASE 2
+    # CLASE 2
 
 
 # Control de Flujos.
@@ -23,19 +23,19 @@
     _Declaramos una variable con un prompt para asignar la edad_
 
 ```javascript
-    - let edad = parseInt(prompt("Ingresa tu edad:"));
-    __Ejemplo 1 valor ingresado:  20__ 
-    __Ejemplo 2 valor ingresado:  16__ 
+    let edad = parseInt(prompt("Ingresa tu edad:"));
+    Ejemplo 1 valor ingresado:  20
+    Ejemplo 2 valor ingresado:  16
 
     if (edad >= 18){
         console.log("Sos mayor de edad");
     }
-        _Ejemplo 1 valor ingresado:  20_ __es TRUE__
-        _Ejemplo 2 valor ingresado:  16_ __es FALSE__
+        Ejemplo 1 valor ingresado:  20 es TRUE
+        Ejemplo 2 valor ingresado:  16 es FALSE
     else{
     console.log("Sos menor de edad");   
-        _Ejemplo 1 valor ingresado:  20_ __es FALSE__
-        _Ejemplo 2 valor ingresado:  16_ __es TRUE__
+        Ejemplo 1 valor ingresado:  20 es FALSE
+        Ejemplo 2 valor ingresado:  16 es TRUE
     }
 ```
 
@@ -57,9 +57,9 @@
 ```
 - _Siguiendo con el ejemplo anterior:_
 
-```javascript
     _Declaramos una variable con un prompt para asignar la edad_
-    - let edad = parseInt(prompt("Ingresa tu edad:"));
+```javascript
+    let edad = parseInt(prompt("Ingresa tu edad:"));
     Ejemplo 1 valor ingresado:  20
     Ejemplo 2 valor ingresado:  16
     Ejemplo 3 valor ingresado:  Agustin
@@ -88,9 +88,9 @@
 ```javascript
     if (edad >= 18){
         console.log("Sos mayor de edad");
-    } else if (edad < 18) { __(*A*)__
+    } else if (edad < 18) {              /*(A)*/
     console.log("Sos menor de edad");
-    } else if (edad < 0) { __(*B*)__
+    } else if (edad < 0) {             /*(B)*/
     console.log("La edad debe ser mayor a 0");
     } else("La edad ingresada es Incorrecta");
 ```
@@ -102,23 +102,23 @@
 ## Operadores en Java Script
 
 - Asignación:
-    -     =
+    =
 - Es igual:
-    -     ==
+    ==
 - Es estrictamente igual:
-    -     ===
+    ===
 - Es distinto:
-    -     !=
+    !=
 - Es estrictamente distinto:
-    -     !==
+    !==
 - Es manor, menor o igual, mayor, mayor igual:
-    -     <, <=, >, >=
+    <, <=, >, >=
 - Operador and (y):
-    -     &&
+    &&
 - Operador or (o):
-    -     ||
+    ||
 - Operador not (no):
-    -     !
+    !
 
 ---
 - En este caso estamos pidiendo al usuario que ingrese un valor y segun el valor ingresado que devuelva _true_ or _false_ pero de una manera un poco extensa. Se podría acortar para "ahorrar" código.
@@ -173,10 +173,10 @@ Ejemplo de como se aplica:
 ```javascript
     let ingreseNombre = prompt("Ingrese su nombre");
     let ingreseApellido = prompt("Ingrese su Apellido");
-    let ingreseApellido = prompt("Ingrese su Edad);
+    let ingreseApellido = prompt("Ingrese su Edad");
     const VACIO = "";
 
-    if(ingreseNombre _!=_ VACIO _&&_ ingreseApellido _!=_ VACIO){
+    if(ingreseNombre != VACIO && ingreseApellido != VACIO){
         alert("Su nombre es " + ingreseNombre + " y el apellido es " + ingreseApellido);
     } else {
         alert("falta información");
@@ -184,7 +184,7 @@ Ejemplo de como se aplica:
 ```
 - Ahora agregamos una nueva condición dentro de la condición. Mediante un prompt va a pedir ingresar la edad siempre y cuando primera condición sea true
 ```javascript
-if(ingreseNombre _!=_ VACIO _&&_ ingreseApellido _!=_ VACIO){
+if(ingreseNombre != VACIO && ingreseApellido != VACIO){
         if ingreseEdad != VACIO{
             alert("Su nombre es " + ingreseNombre + " y el apellido es " + ingreseApellido + " y tiene " + ingrese su edad);
         } else {
