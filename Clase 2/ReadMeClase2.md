@@ -1,4 +1,4 @@
-    # CLASE 2
+# CLASE 2
 
 
 # Control de Flujos.
@@ -28,14 +28,14 @@
     Ejemplo 2 valor ingresado:  16
 
     if (edad >= 18){
-        console.log("Sos mayor de edad");
+    console.log("Sos mayor de edad");
     }
-        Ejemplo 1 valor ingresado:  20 es TRUE
-        Ejemplo 2 valor ingresado:  16 es FALSE
+    Ejemplo 1 valor ingresado:  20 es TRUE
+    Ejemplo 2 valor ingresado:  16 es FALSE
     else{
     console.log("Sos menor de edad");   
-        Ejemplo 1 valor ingresado:  20 es FALSE
-        Ejemplo 2 valor ingresado:  16 es TRUE
+    Ejemplo 1 valor ingresado:  20 es FALSE
+    Ejemplo 2 valor ingresado:  16 es TRUE
     }
 ```
 
@@ -60,9 +60,9 @@
     _Declaramos una variable con un prompt para asignar la edad_
 ```javascript
     let edad = parseInt(prompt("Ingresa tu edad:"));
-    Ejemplo 1 valor ingresado:  20
-    Ejemplo 2 valor ingresado:  16
-    Ejemplo 3 valor ingresado:  Agustin
+        Ejemplo 1 valor ingresado:  20
+        Ejemplo 2 valor ingresado:  16
+        Ejemplo 3 valor ingresado:  Agustin
     if (edad >= 18){
         console.log("Sos mayor de edad");
         Ejemplo 1 valor ingresado:   20 es TRUE
@@ -87,7 +87,7 @@
 - Ejemplo si la edad ingresada fue -16:
 ```javascript
     if (edad >= 18){
-        console.log("Sos mayor de edad");
+    console.log("Sos mayor de edad");
     } else if (edad < 18) {              /*(A)*/
     console.log("Sos menor de edad");
     } else if (edad < 0) {             /*(B)*/
@@ -102,23 +102,23 @@
 ## Operadores en Java Script
 
 - Asignación:
-    =
+    -    =
 - Es igual:
-    ==
+    -    ==
 - Es estrictamente igual:
-    ===
+    -    ===
 - Es distinto:
-    !=
+    -    !=
 - Es estrictamente distinto:
-    !==
+    -    !==
 - Es manor, menor o igual, mayor, mayor igual:
-    <, <=, >, >=
+    -    <, <=, >, >=
 - Operador and (y):
-    &&
+    -    &&
 - Operador or (o):
-    ||
+    -    ||
 - Operador not (no):
-    !
+    -    !
 
 ---
 - En este caso estamos pidiendo al usuario que ingrese un valor y segun el valor ingresado que devuelva _true_ or _false_ pero de una manera un poco extensa. Se podría acortar para "ahorrar" código.
