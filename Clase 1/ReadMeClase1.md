@@ -120,7 +120,7 @@ declaracion = asignacion;
     const RESULTADO = a + b;
     console.log (RESULTADO); 
 /* va a imprimir en pantalla "3" */
-
+```
 ### Concatenación
 ```javascript
     let primerNombre = "Agustín";
@@ -150,6 +150,6 @@ declaracion = asignacion;
 - Es un metodo o función propia de JS.
 - La sentencia alert() mostrará una ventana sobre la página web que estamos accediendo mostrando un mensaje que se pase como parámetro a la llamada.
 ```javascript
-    alert("¡Hola!);
+    alert("¡Hola!");
     /* va a mostrar una alerta que diga "¡Hola!" */
 ```

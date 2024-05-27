@@ -9,13 +9,15 @@
     - Debe tener el nombre en minuscula y sin espacio, al final tiene que ir __()__.
     - El nombre de la función no se puede repetir en otra.
 
+```javascript
     function saludar(){
         console.log("Hola.");
     }
+```
+- Dentro de las llave pongo lo que se tiene que hacer cada vez que llame a la función.
+- Hasta este momento no se imprme nada en la pantalla por que no llame.
 
-    - Dentro de las llave pongo lo que se tiene que hacer cada vez que llame a la función. Hasta este momento no se imprme nada en la pantalla por que no llame.
-
+```javascript
     saludar();
-    _recién ahora va a imprimir en pantalla_
-
-
+    /*recién ahora va a imprimir en pantalla */
+```
