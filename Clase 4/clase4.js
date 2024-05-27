@@ -1,3 +1,39 @@
+function saludar(){
+    console.log("Hola.");
+}
+saludar();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function saludar() {
     console.log("¡Hola!")
 }
@@ -9,7 +45,7 @@ function pedirNombre() {
 }
 // pedirNombre();
 
-function usandoParametros(parametro1, parametro2, parametro3) { /* "parametro1" aca se llama así, cuanlo lo pongo dentro de usandoParametros(3,"hola",7); se llama argumentos */
+function usandoParametros(parametro1, parametro2, parametro3) { /* "parametro1" aca se llama así, cuanlo lo pongo dentro de usandoParametros(3,"hola",7); se llama argumentos
     console.log(parametro1 + parametro2 + parametro3);
 }
 usandoParametros(true, false, true);
@@ -76,3 +112,4 @@ const iva = x => console.log(x * 0.21);
 iva (1000);
 
 // ------------------- FUNCIONES FLECHA -------------------
+*/

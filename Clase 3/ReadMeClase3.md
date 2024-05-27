@@ -2,13 +2,13 @@
 ---
 ## Ciclos / Iteraciones
 
-- Bucles o ciclos: Es algo que se repite cierta o infinita cantidad de veces. Se usan las siguientes estructuras.
+- **Bucles o ciclos:** Es algo que se repite cierta o infinita cantidad de veces. Se usan las siguientes estructuras.
 
     __for__, __while__, __do...while__
 
-- Ciclos por conteo:
+- **Ciclos por conteo:**
     -Repiten un bloque de código X número de veces específica. Estructura __for__.
-- Ciclos condicionales:
+- **Ciclos condicionales:**
     Repiten un bloque de código mientras la condición evaludad es verdadera. Estructura __while__, __do...while__.
 
 ### Estructura FOR
@@ -17,15 +17,20 @@
 - El "hasta" es el único elemento que decide si se repite o se detiene un ciclo.
 - La "actualización" es el nuevo valor que se asigna después de cada repetición a las variables qeu controlan la retición.
 
+```javascript
     _for_:(__desde__;__hasta__;__actualización__);{
         lo que escriba se va a repetir mientras dure el ciclo.
     }
+```
 
 - Ejemplo:  
 - Vamos a imprimir en pantalla todos los valores de 0 al 9
+
+ ```javascript
 for (let i = 0; i < 10; i++);{
 console.log(i);
 }
+```
 
 for --> es la estructura.
 let --> es la variable que declaramos
@@ -51,10 +56,13 @@ a = a + 1; _imrpime 9_
 
 - Otro Ejemplo:
 
+```javascript
 let nombre = "Agustin";
 for(let i = 1; i< 4;i++){
     console.log( i + " vuelta del " + nombre);
 }
+```
+
 _Va a imprimir lo siguiente:_
 1 vuelta del Agustin
 2 vuelta del Agustin
@@ -63,24 +71,27 @@ _Va a imprimir lo siguiente:_
 ### Break
 - Dentro del ciclo __for__ aplicamos un __if__ para cuando __i__ sea igual a __5__ deje de hacer el bucle. No va a llegar a hasta 9.
 
+```javascript
 for(let i = 1; i< 10;i++){
     if(i == 5){
         break;
     }
         console.log( i + " vuelta del " + nombre);
 }
+```
 
 __5 vuelta del Agustin__ va a ser lo "maximo" que se va a imprimir.
 
 ### Continue
 - Dentro del ciclo __for__ aplicamos un __if__ para cuando __i__ sea igual a __5__ deje de hacer el bucle. No va a llegar a hasta 9.
-
+```javascript
 for(let i = 1; i< 10;i++){
     if(i == 5){
         continue;
     }
         console.log( i + " vuelta del " + nombre);
 }
+```
 
 __4 vuelta del Agustin__ 
 __*no va a imprimir la vuelta 5*__
@@ -92,24 +103,26 @@ __6 vuelta del Agustin__
 - La estructura while permite crear bucles que se ejecutan cero o mas veces dependiendo de la condicion indicada.
 - El funcionamiento del bucle _while_ se resume en: mientras se cumpla la condición indicada, repite las instrucciones incliudas dentro del bucle.
 -Cuando usamos _while_, asumimios que la repetición va a finalizar. Pero si la comparación no se hace bien se puede generar un bucle infinito.
-
+```javascript
     while(condicion){
         acción
     }
+```
 _mientra la condición sea verdadera se va a repetir la acción_
-
+```javascript
     let repetir = true;
     while(repetir){
         console.log("Esto va repetirse infinitamente");
     }
-
+```
 - Ejemplo:
-
+```javascript
     let i = 0;
     while(i < 5){
         console.log("Imprimiendo desde el While " + i)
         i++
     };
+```
 
 _Imprimiendo desde el While 1_
 _Imprimiendo desde el While 2_
@@ -117,13 +130,13 @@ _Imprimiendo desde el While 2_
 _Imprimiendo desde el While 5_
 
 ## DO WHILE
-
+```javascript
     let i = 0;
     do {
         console.log("Imprimiendo desde el do While " + i)
         i++
     }while(i <= 7);
-
+```
 _Imprimiendo desde el do While 5_
 _Imprimiendo desde el do While 6_
 _Imprimiendo desde el do While 7_
@@ -134,7 +147,7 @@ _Imprimiendo desde el do While 7_
 - La estructura __Switch__ esta especialmente diseñanda para manejar de forma sencilla __múltiples condiciones sobre la misma variable__ (técnicamente es un _if_ pero _switch_ es mas ordenado) pero solo permite evaluar casos individuales.
 
 Ejemplo:
-
+```javascript
 let edadIngresada = parseIntprompt(("Ingresar edad: "));
 
 switch (edadIngresada){
@@ -150,7 +163,7 @@ switch (edadIngresada){
     default:
         console.log("El dato ingresado no es valido");
 }
-
+```
 
 
 
