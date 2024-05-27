@@ -86,6 +86,17 @@ __4 vuelta del Agustin__
 __*no va a imprimir la vuelta 5*__
 __6 vuelta del Agustin__ 
 
+
 ## WHILE
 
+## METODOS
+- Se ve con mas detalle en clases mas adelante.
+- __length__ cuenta la cantidad de caracteres de la asignación dada. En este caso "Agustin" tiene mas de 6 caracteres.
+
+    let nombre = "Agustin";
+    if (nombre.__length__ < 6){
+        console.log("El nombre Agustin tiene menos de 6 letras.")
+    } else{
+        console.log("El nombre Agustin tiene mas de 6 letras.")
+    }
 

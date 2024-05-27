@@ -1,8 +1,7 @@
 let nombre = "Agustin";
 
-for(let i = 1; i< 10;i++){
-    if(i == 5){
-        console.log( i + " vuelta del " + nombre);
-        break;
-    }
+if (nombre.length < 6){
+    console.log("El nombre Agustin tiene menos de 6 letras.")
+} else{
+    console.log("El nombre Agustin tiene mas de 6 letras.")
 }
