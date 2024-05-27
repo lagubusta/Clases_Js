@@ -1,10 +1,9 @@
 # Clase 3
----
 ## Ciclos / Iteraciones
 
 - **Bucles o ciclos:** Es algo que se repite cierta o infinita cantidad de veces. Se usan las siguientes estructuras.
 
-    __for__, __while__, __do...while__
+    _for_, _while_, _do...while_.
 
 - **Ciclos por conteo:**
     -Repiten un bloque de código X número de veces específica. Estructura __for__.
@@ -32,17 +31,17 @@ console.log(i);
 }
 ```
 
-for --> es la estructura.
-let --> es la variable que declaramos
-i = 0 --> es la asignación a nuestra variable, desde donde va a empezar a contar.
-i < 10 --> es hasta donde va a contar. Mientras i sea menor que 10.
-i++ --> Quiere decir que el valor tenga  i le va a sumar 1.
-
-Primera vuelta de ejecución se imprime: 0
-Segunda vuelta de ejecución se imprime: 1
-Tercera vuelta de ejecución se imprime: 2
-...
-Decima vuelta de ejecución se imprime: 9 y frena por que la condición se deja de cumplir, por que i pasaria a ser 10 y 10 NO es mayor que 10.
+    - for --> es la estructura.
+    - let --> es la variable que declaramos
+    - i = 0 --> es la asignación a nuestra variable, desde donde va a empezar a contar.
+    - i < 10 --> es hasta donde va a contar. Mientras i sea menor que 10.
+    - i++ --> Quiere decir que el valor tenga  i le va a sumar 1.
+---
+    - Primera vuelta de ejecución se imprime: 0
+    - Segunda vuelta de ejecución se imprime: 1
+    - Tercera vuelta de ejecución se imprime: 2
+    - ...
+    - Decima vuelta de ejecución se imprime: 9 y frena por que la condición se deja de cumplir, por que i pasaria a ser 10 y 10 NO es mayor que 10.
 
 ---
 - En resumen acorta de todo este codigo:
