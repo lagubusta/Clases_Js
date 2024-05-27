@@ -19,13 +19,14 @@
 - La "actualización" es el nuevo valor que se asigna después de cada repetición a las variables qeu controlan la retición.
 
 ```javascript
-    _for_:(**desde**;**hasta**;**actualización**);{
+    _for_:(desde; hasta; actualización);{
         lo que escriba se va a repetir mientras dure el ciclo.
     }
 ```
 
 #### Ejemplo:  
-    - Vamos a imprimir en pantalla todos los valores de 0 al 9
+
+- Vamos a imprimir en pantalla todos los valores de 0 al 9
 
  ```javascript
 for (let i = 0; i < 10; i++);{
@@ -43,7 +44,9 @@ console.log(i);
     - Segunda vuelta de ejecución se imprime: 1
     - Tercera vuelta de ejecución se imprime: 2
     - ...
-    - Decima vuelta de ejecución se imprime: 9 y frena por que la condición se deja de cumplir, por que i pasaria a ser 10 y 10 NO es mayor que 10.
+    - Decima vuelta de ejecución se imprime: 9 y frena
+    
+    -Por que la condición se deja de cumplir, por que i pasaria a ser 10 y 10 NO es mayor que 10.
 
 
 - En resumen acorta de todo este codigo:
@@ -85,7 +88,7 @@ for(let i = 1; i< 10;i++){
     }
         console.log( i + " vuelta del " + nombre);
 }
-**5 vuelta del Agustin** va a ser lo "maximo" que se va a imprimir.
+"5 vuelta del Agustin" va a ser lo "maximo" que se va a imprimir.
 ```
 
 ### Continue
@@ -146,7 +149,7 @@ Imprimiendo desde el While 5
         console.log("Imprimiendo desde el do While " + i)
         i++
     }while(i <= 7);
-    
+
 Imprimiendo desde el do While 5
 Imprimiendo desde el do While 6
 Imprimiendo desde el do While 7
@@ -177,24 +180,15 @@ switch (edadIngresada){
 ```
 
 
-
-
-
-
-
-
-
-
-
-### NOTA
+#### NOTA
 
 - ParseInt():
     - Me aseguro que lo que ponga dentro del () sea un numero entero y no un string.
     Por ejemplo:
-        
+    ```java   
     _formato numerico_ let a = 1;
     _formato string_    let b ="1";
-
+    ```
     -si hago a + b me va a dar 11 por que toma el valor de b como string.
         a+ b = 11 _la operación + esta concatenando.
     -Para que de 2 tengo que hacer
