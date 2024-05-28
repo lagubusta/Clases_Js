@@ -15,7 +15,7 @@
 // const arrayVacio = [];
 // Array no se puede remplazar con otro tipo de dato.
 
-// const arrayNumerico = [1, 2, 3, 4, 5]; // Tipo numerico.
+// const arrayNumerico = [1, 2, 3, 4, 5, 6.5]; // Tipo numerico.
 
 // const arrayConLetras = ['a', 'b', 'c',] // tipo caracter se completa con ' '.
 
@@ -35,7 +35,7 @@
 
 //] // tipo mixto con objetos.
 
-// console.log(arrayNumerico[3]);
+// console.log(arrayNumerico[8]);
 
 
 // USAR < despues del let
@@ -44,7 +44,7 @@
 // }
 
 // for (let index = 0; index < 5; index++) {
-//     //alert(arrayMixtoConObjetos[index]);
+//     console.log(arrayNumerico[index]);
 // }
 
 //---------------METODOS Y PROPIEDADES
@@ -181,15 +181,15 @@
 
 //D - Agrega un nuevo objeto al array autos que represente otro automóvil con las mismas propiedades. Luego, imprime en la consola el año del último auto del array.
 
-class caractPersonas{
-    constructor (nombre, edad,ciudad) {
-        this.nombre = nombre;
-        this.edad = parseInt(edad);
-        this.ciudad = ciudad;
-    }
-}
+// class caractPersonas{
+//     constructor (nombre, edad,ciudad) {
+//         this.nombre = nombre;
+//         this.edad = parseInt(edad);
+//         this.ciudad = ciudad;
+//     }
+// }
 
-const personas = [];
-personas.push(new personas = "Agustin", 30, "San Isidro");
+// const personas = [];
+// personas.push(new personas = "Agustin", 30, "San Isidro");
 
-console.log(personas);
+// console.log(personas);

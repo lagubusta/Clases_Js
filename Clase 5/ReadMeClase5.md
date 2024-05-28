@@ -4,6 +4,7 @@
 
 - Cualidades son los atributos de un **objeto**, los sustantivos o  adjetivos.
 - Los **metodos** son los verbos, son las cosas que puede hacer ese objeto.
+- **Es una funcion que pertene o corresponede a un objeto. Son de manera local**
 
 ---
 
