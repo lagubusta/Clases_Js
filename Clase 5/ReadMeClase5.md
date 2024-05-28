@@ -201,6 +201,7 @@ Buenos Aires
     - Este constructor va a necesitar parámtros.
 ```javascript
 class Vehiculo { /*DEFINIMOS LAS CLASE*/
+    /* METODO CONSTRUCTOR*/ 
     constructor(tipo, marca, condicion, color){ /* INGRESAMOS LOS PARAMTROS*/
         this.tipo = tipo; /*DEFINE EL CONSTRUCTOR */
         this.marca = marca;
@@ -220,5 +221,70 @@ color: "Fucsia"
 condicion: "Usado"
 marca: "Nissan"
 tipo: "Auto"
+[[Prototype]]: Object
+```
+- Para crear un metodo no hace falta poner *function*.
+```javascript
+class Vehiculo {
+    constructor(tipo, marca, condicion, color){
+        this.tipo = tipo;
+        this.marca = marca;
+        this.condicion = condicion;
+        this.color = color;
+    }
+    enciende(){ /* DEFINIMOS UN NUEVO METODO*/
+        console.log("El vehiculo " + this.tipo + " esta encendido.");
+    }
+}
+auto.enciende();
+/* IMPRIME */ El vehiculo Auto esta encendido.
+```
+- Podemos agregar metodos propios de objetos dentro de un objeto.
+```javascript
+class Vehiculo {
+    constructor(tipo, marca, condicion, color){
+        this.tipo = tipo;
+        this.marca = marca.toUpperCase();
+        this.condicion = condicion;
+        this.color = color;
+    }
+    enciende(){ /* DEFINIMOS UN NUEVO METODO*/
+        console.log("El vehiculo " + this.tipo + " esta encendido.");
+    }
+}
+/* IMPRIME en MAYUSCULA el valor de "marca"*/
+Vehiculo {tipo: 'Auto', marca: 'NISSAN', condicion: 'Usado', color: 'Fucsia'}
+```
+
+- Agregamos todo junto para ver como es y como queda:
+```javascript
+class Producto {
+    constructor(nombre, descripcion, categoria, precio, stock){
+this.nombre = nombre;
+this.descripcion = descripcion;
+this.categoria = categoria;
+this.precio = parseFloat(precio);
+this.stock = parseInt(stock);
+    }
+    agregamosIva(){
+        this.precio = this.precio *1.21;
+    }
+    vender() {
+        console.log("El producto " + this.nombre + " fue vendido");
+    }
+}
+const producto1 = new Producto("Azucar", "Azucar negra", "Almacen", 1000, 5);
+console.log(producto1);
+producto1.agregamosIva();
+```
+
+- Va a imprimir esto:
+```javascript
+Producto {nombre: 'Azucar', descripcion: 'Azucar negra', categoria: 'Almacen', precio: 1000, stock: 5}
+categoria: "Almacen"
+descripcion: "Azucar negra"
+nombre: "Azucar"
+precio: 1210
+stock: 5
 [[Prototype]]: Object
 ```

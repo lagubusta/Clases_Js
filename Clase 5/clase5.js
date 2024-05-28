@@ -1,17 +1,21 @@
-class Vehiculo {
-    constructor(tipo, marca, condicion, color){
-        this.tipo = tipo;
-        this.marca = marca;
-        this.condicion = condicion;
-        this.color = color;
+class Producto {
+    constructor(nombre, descripcion, categoria, precio, stock){
+this.nombre = nombre;
+this.descripcion = descripcion;
+this.categoria = categoria;
+this.precio = parseFloat(precio);
+this.stock = parseInt(stock);
+    }
+    agregamosIva(){
+        this.precio = this.precio *1.21;
+    }
+    vender() {
+        console.log("El producto " + this.nombre + " fue vendido");
     }
 }
-const auto = new Vehiculo ("Auto","Nissan", "Usado", "Fucsia")
-console.log (auto);
-
-
-
-
+const producto1 = new Producto("Azucar", "Azucar negra", "Almacen", 1000, 5);
+console.log(producto1);
+producto1.agregamosIva();
 
 
 //------------------------------ Ejercicios Avanzados de JavaScript con Objetos y Clases------------------------------
