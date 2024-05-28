@@ -1,3 +1,19 @@
+class Vehiculo {
+    constructor(tipo, marca, condicion, color){
+        this.tipo = tipo;
+        this.marca = marca;
+        this.condicion = condicion;
+        this.color = color;
+    }
+}
+const auto = new Vehiculo ("Auto","Nissan", "Usado", "Fucsia")
+console.log (auto);
+
+
+
+
+
+
 //------------------------------ Ejercicios Avanzados de JavaScript con Objetos y Clases------------------------------
 
 //-----------------------------------Objetos y Obtener Valores
@@ -65,90 +81,92 @@
 
 // esto va a hacer que cada vez que sllame a Producto.nombre me muestre la asignación que le di.
 //}
-function Producto(nombre, precio, cantidad) {
-    this.nombre = nombre;
-    this.precio = precio;
-    this.cantidad = cantidad;
-}
-console.log(Producto);
 
-const Leche = new Producto("Leche", 1500, 10,)
-console.log(Leche);
+// function Producto(nombre, precio, cantidad) {
+//     this.nombre = nombre;
+//     this.precio = precio;
+//     this.cantidad = cantidad;
+// }
+// console.log(Producto);
+
+// const Leche = new Producto("Leche", 1500, 10,)
+// console.log(Leche);
 
 // 6- Crea un constructor llamado Persona con las propiedades nombre, edad y ciudad. Crea un objeto nuevo utilizando este constructor.
-function Persona(nombre, edad, ciudad,) {
-    this.nombre = nombre;
-    this.edad = edad;
-    this.ciudad = ciudad;
-}
-console.log(Persona);
-const Agustin = new Persona("Agustin", 30, "Buenos Aires");
-console.log(Agustin);
-const Sofia = new Persona("Sofia", 24, "Buenos Aires");
-console.log(Sofia);
+// function Persona(nombre, edad, ciudad) {
+//     this.nombre = nombre;
+//     this.edad = edad;
+//     this.ciudad = ciudad;
+// }
 
-// 7- Crea un constructor llamado Libro con las propiedades titulo, autor y año. Crea un objeto nuevo utilizando este constructor.
-function Libro(titulo, autor, año) {
-    this.titulo = titulo;
-    this.autor = autor;
-    this.año = año;
-}
-console.log(Libro);
-const HarryPotter = new Libro("HP la pierda", "JK", 2001);
-console.log(HarryPotter);
+// console.log(Persona);
+// const Agustin = new Persona("Agustin", 30, "Buenos Aires");
+// console.log(Agustin);
+// const sofia = new Persona("Sofia", 24, "Buenos Aires");
+// console.log(Sofia);
+
+// // 7- Crea un constructor llamado Libro con las propiedades titulo, autor y año. Crea un objeto nuevo utilizando este constructor.
+// function Libro(titulo, autor, año) {
+//     this.titulo = titulo;
+//     this.autor = autor;
+//     this.año = año;
+// }
+// console.log(Libro);
+// const HarryPotter = new Libro("HP la pierda", "JK", 2001);
+// console.log(HarryPotter);
 
 //-----------------------------------USO DE THIS
 // 8- Crea un objeto llamado rectangulo con las propiedades base y altura. Agrega un método llamado calcularArea que calcule y devuelva el área del rectángulo.
-function Rectangulo(base, altura) {
-    this.base = base;
-    this.altura = altura;
+// function Rectangulo(base, altura) {
+//     this.base = base;
+//     this.altura = altura;
 
-    this.calcularArea = function () {
-        return this.base * this.altura
-    };
-}
-const rectangulo = new Rectangulo(5, 10);
-console.log(rectangulo.calcularArea());
+//     this.calcularArea = function () {
+//         return this.base * this.altura
+//     };
+// }
+// const rectangulo = new Rectangulo(5, 10);
+// console.log(rectangulo.calcularArea());
 
 // 9- Crea un objeto llamado circulo con la propiedad radio. Agrega un método llamado calcularPerimetro que calcule y devuelva el perímetro del círculo.
-function Circulo(radio) {
-    this.radio = radio;
+// function Circulo(radio) {
+//     this.radio = radio;
 
-    this.calcularPerimetro = function () {
-        return 2* Math.PI * this.radio;
-    };
-}
-const circulo = new Circulo (5);
-console.log(circulo.calcularPerimetro());
+//     this.calcularPerimetro = function () {
+//         return 2* Math.PI * this.radio;
+//     };
+// }
+// const circulo = new Circulo (5);
+// console.log(circulo.calcularPerimetro());
 
 // 10- Crea un objeto llamado estudiante con las propiedades nombre, edad y curso. Agrega un método llamado presentarse que imprima en la consola una presentación del estudiante.
 
-function Estudiante (nombre, edad, curso){
-    this.nombre = nombre;
-    this.edad = edad;
-    this.curso = curso;
+// function Estudiante (nombre, edad, curso){
+//     this.nombre = nombre;
+//     this.edad = edad;
+//     this.curso = curso;
 
-    this.presentarse = function () {
-        console.log ("")
-    }
-}
-const estudiante = new Estudiante ("Alejandro", 35, "1 A");
-console.log (Estudiante.Alejandro);
+//     this.presentarse = function () {
+//         console.log ("")
+//     }
+// }
+// const estudiante = new Estudiante ("Alejandro", 35, "1 A");
+// console.log (Estudiante.Alejandro);
 
 //-----------------------------------Métodos y Operaciones con Objetos
 
 // 11- Crea un objeto llamado cuentaBancaria con las propiedades saldo y titular. Agrega un método llamado depositar que reciba un monto y lo sume al saldo.
-function CuentaBancaria(titular, saldo){
-    this.titular = titular;
-    this.saldo = saldo;   
+// function CuentaBancaria(titular, saldo){
+//     this.titular = titular;
+//     this.saldo = saldo;   
     
-    this.depositar = function (monto){
-        this.saldo += monto;
-    }
-}
-const cuenta = new CuentaBancaria ("Agustin", 1000);
-cuenta.depositar(500);
-console.log(`Nuevo Saldo: ${cuenta.saldo}`);
+//     this.depositar = function (monto){
+//         this.saldo += monto;
+//     }
+// }
+// const cuenta = new CuentaBancaria ("Agustin", 1000);
+// cuenta.depositar(500);
+// console.log(`Nuevo Saldo: ${cuenta.saldo}`);
 
 
 // 12- Agrega un método llamado retirar al objeto cuentaBancaria que reciba un monto y lo reste al saldo.
