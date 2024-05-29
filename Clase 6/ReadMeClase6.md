@@ -34,7 +34,7 @@ const arrayConLetras = ['a', 'b', 'c',];
 ```
 Tipo String se completa con "".
 ```javascript
-const arrayConString = ["Hola", "mundo","como", "estas?"];
+const arrayConString = ["Hola", "mundo", "como", "estas?"];
 ```
 - Tipo booleano:
 ```javascript
@@ -158,8 +158,9 @@ arrayNumerico.pop();
 // Nuestro array ahora quedaría de esta forma
 arrayNumerico = [1, 2, 3, 4, 5, 6.5];
 ```
-###### NO SE RECOMIENDO USAR ESTE METODO. *mismo problema que tiene shif y unshift*
-- **splice**
+###### NO SE RECOMIENDO USAR ESTE METODO.
+*mismo problema que tiene shif y unshift*
+- **splice** *no confundir con slice*
 - Sirve para eliminar parametros del medio de nuestro array.
 - El primer parametro indica la posición donde se encuentra el primer parámetro que queremos eliminar y el segundo es la cantidad de elementos a eliminar.
 - En este caso va a eliminar los parametros *2* y *3*
@@ -171,4 +172,75 @@ arrayNumerico.splice(1,2);
 arrayNumerico = [1, 4, 5, 6.5];
 ```
 
+### JOIN
+
+- Podemos generar un string con todos los elementos del array, separados por el valor que pasamos por parámtro.
+- Llamamos al metodo y dentro de los **()** indicamos que es lo que va a separar cada uno de nuestros parámetros. Y lo transforma en un string.
+```javascript
+const arrayConString = ["Hola", "mundo", "como", "estas?"];
+console.log(arrayConString.join(", "));
+// Hola, mundo, como, estas?
+```
+### CONCAT
+- Con este método podemos combinar dos Arrays en un único array resultante.
+```javascript
+const arrayConString = ["Hola", "mundo", "como", "estas?"];
+const arrayNumerico = [1, 4, 5, 6.5];
+
+console.log(arrayConString.concat(arrayNumerico));
+//["Hola", "mundo", "como", "estas?", 1, 4, 5, 6.5]
+```
+- Antes de usar *concat* cada array tenia 4 elementos, despues de usar el console.log() paso a tener 8.
+- El array que pongo dentro del (), se va a concatenar despues del ultimo elemento del array que lo llama.
+
+### SLICE
+*no confundir con splice*
+- Devuelve una copia de una parte del array.
+- Empezarndo por el **x** parámetro que le indiqué hasta **x** parámetro, **EL FIN NO ESTA INCLUIDO**.
+- El array original no se modifica.
+
+```javascript
+const arrayConString = ["Hola", "mundo", "como", "estas?"];
+const arrayConStringSLICE = arrayConString.slice(1,3);
+
+console.log(arrayConStringSLICE);
+// IMPRIME
+mundo como
+```
+### INDEXOF
+*tiene que estar exactamente escrito igual*
+- El método indexOf() permite obtener el indice de un elemento en un array.
+- Recibe por párametro el elemento que queremos buscar en el array y en caso de exisit devuelve su indice.
+- En caso de no existir duvelve el valor **-1**.
+
+```javascript
+const arrayConString = ["Hola", "mundo", "como", "estas?"];
+console.log(arrayConString.indexOf("mundo"));
+// 1
+const arrayConString = ["Hola", "mundo", "como", "estas?"];
+console.log(arrayConString.indexOf("estas?"));
+// 3
+const arrayConString = ["Hola", "mundo", "como", "estas?"];
+console.log(arrayConString.indexOf("Agustín"));
+// -1
+```
+### INCLUDES
+*tiene que estar exactamente escrito igual*
+- Permite saber si un elemento que recibe por parámetro existe dentro de un array.
+- Retorna *true* o *false*.
+```javascript
+const arrayConString = ["Hola", "mundo", "como", "estas?"];
+console.log(arrayConString.includes("estas?"));
+// true
+const arrayConString = ["Hola", "mundo", "como", "estas?"];
+console.log(arrayConString.includes("Agustín"));
+// false
+```
+### Reverse
+- Invierte el orden del array.
+```javascript
+const arrayConString = ["Hola", "mundo", "como", "estas?"];
+console.log(arrayConString.reverse());
+// estas? como mundo Hola
+```
 
