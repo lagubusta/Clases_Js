@@ -1,205 +1,111 @@
-function mayorQue(n){
-    return (m) => m > n
-}
-
-let mayorQueDiez = mayorQue(10);
-console.log(mayorQueDiez(20));
-console.log(mayorQueDiez(8));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// esta funcion es global ya que puse como nombre "inicio" y "fin" se puede usar en cualquier parte del codigo.
-
-// function sumarRango(inicio, fin){
-
-//     let total = 0;
-//     for (let i = inicio; i <= fin; i++) {
-//         total += i;
-//     }
-//     return total;
-// }
-// console.log(sumarRango(1, 10));
-
-//-------------------------
-
-
-// Defino una funcion anonima que me va a dar como resultado una funcion.
-
-// "numero" es el numero que quiero dejar fijo.
-
-// function mayorQue(numero){
-//     return (numeroAComparar) => numeroAComparar > numero;
-// }
-
-// let mayorQueDiez = mayorQue(10);
-
-// console.log(mayorQueDiez(12));
-
-
-
-
-// ESTA FUNCION SERÍA LA "MADRE"
-// function asignarOperacion(operacion) {
-//     if (operacion == "sumar") {
-//         return (a, b) => a + b;
-//     }
-//     else if (operacion == "restar") {
-//         return (a, b) => a - b;
-//     }
-// }
-
-// const funcionSumar = asignarOperacion("sumar"); // const funcionSumar = (a, b) => a + b
-// const funcionRestar = asignarOperacion("restar"); // const funcionRestar = (a, b) => a - b
-
-// console.log(funcionSumar(10, 5));
-// console.log(funcionRestar(10, 5));
-
-
-
-
-
-// RECIBIR UNA FUNCION POR PARAMETRO
-
-// function porCadaElemento(myArray, myFuncion) { //paso una funion como parametro "myFuncion" y un "myArray" como segundo parametro.
-//     for (const elemento of myArray) { // POR CADA ELEMENTO DE MYARRAY, EJECUTA LA FUNCION
-//         myFuncion(elemento); // QUIERO QUE ESTO SE "APLIQUE" A CADA ELEMENTO DE MYARRAY (EL FOR RECORRE TODOS LOS ELEMENTO DEL ARRAY)
+// function porCadaElemento(myArray, myFuncion){
+//     for (const elemento of myArray){
+//         myFuncion (elemento);
 //     }
 // }
 // const numeros = [1, 2, 3, 4, 5, 6];
-// porCadaElemento(numeros, console.log); // cuando paso una funcion como parametro no lleva ().
-// // Los () los lleva cuando la defino o cuando la invoco, o la llamo.
-
-
-
+// porCadaElemento(numeros, console.log);
 
 // let total = 0;
-// function acumuladora (numero){
+// function acumuladora(numero){
 //     total += numero;
 // }
 // porCadaElemento(numeros, acumuladora);
-// console.log("Total Acumulado: " + total);
-
+// console.log("Total acumulado: " + total);
 
 
 // const numerosDuplicados = [];
-
-// porCadaElemento(numeros, (elemento) => {numerosDuplicados.push(elemento * 2);});
+// porCadaElemento(numeros, (elemento)=>{
+//     numerosDuplicados.push(elemento * 2);
+// })
 // console.log(numerosDuplicados.join(", "));
 
+// let numerosConIva = [];
+// numeros.forEach((num) =>{
+//     numerosConIva.push(num * 1.21);
+// });
+// console.log(numerosConIva);
 
-//----------------METODO forEach
+const cursos = [
+    { nombre: 'JS', precio: 150000 },
+    { nombre: 'ReactJS', precio: 220000 },
+    { nombre: 'HTML', precio: 50000 },
+    { nombre: 'JAVA', precio: 220000 }
+];
+// const numeros = [1, 2, 3, 4, 5, 6];
+// const numerosDesordenados = [ 1003, 22, 13, 4654, 35, -6];
+// console.log(numerosDesordenados.sort((a, b) => a-b)); // Forma ascendente
+// console.log(numerosDesordenados.sort((a, b) => b-a)); // Forma descendente
 
-
-// numerosDuplicados.forEach((numero) =>{
-//     console.log(numero);
-// })
-
-// let nuevoArray = [];
-// numerosDuplicados.forEach( (numero)=> {
-//     nuevoArray.push(numeros -1);
-// })
-
-// console.log(nuevoArray);
-
-// //----------------metodo Find
-
-// const cursos = [ // es un array de objetos
-//     { nombre: "JavaScript", cantidaAlumnos: 120 },
-//     { nombre: "JavaScript", cantidaAlumnos: 130 },
-//     { nombre: "React", cantidaAlumnos: 90 },
-//     { nombre: "PHP", cantidaAlumnos: 60 },
-// ];
-
-// const resultadoFind = cursos.find((elemento) => elemento.nombre === "JavaScript");
-// console.log(resultadoFind);
-// // Filter
-// const resultadoFilter = cursos.filter((elemento) => elemento.nombre.includes === "JavaScript");
-// console.log(resultadoFilter);
-
-// // const resultadoSome = cursos.some ((elemento) => elemento.nombre.some === )
+// const palabrasDesordenadas = [ 'Sofia', 'Agustin', 'Mateo', 'Ines', 'Ignacio', 'Carolina'];
+// console.log(palabrasDesordenadas.sort((a, b) => a.localeCompare(b))); // Forma ascendente
+// console.log(palabrasDesordenadas.sort((a, b) => b.localeCompare(a))); // Forma descendente
 
 
-// // MAP
-// //Genera un nuevo array con lo que le digo que quiero
+const cursosSort = [
+    { nombre: 'JS', precio: 150000 },
+    { nombre: 'ReactJS', precio: 220000 },
+    { nombre: 'HTML', precio: 50000 },
+    { nombre: 'JAVA', precio: 220000 }
+];
+cursosSort.sort ((a, b) =>{
+    if( a.nombre > b.nombre){
+        return 1;
+    }
+    if( a.nombre < b.nombre){
+        return -1;
+    }
+    return 0;
+}
+)
+console.log(cursosSort);
 
-// const resultadoMap = cursos.map((elemento) => elemento.nombre);
-// console.log(resultadoMap);
-// //Usando map busco y acutalizo nuevos "datos"
-// const actualizarCantidadDeAlumnos = cursos.map((elemento) => {
-//     return {
-//         nombreNuevo: elemento.nombre,
-//         cantidadNueva: elemento.cantidaAlumnos + 20
-//     }
-// })
-// console.log(actualizarCantidadDeAlumnos);
 
 
-// // Reduce
 
-// //ACUMULA COMO ESTO
-// // function sumarRango(inicio, fin){
 
-// //     let total = 0;
-// //     for (let i = inicio; i <= fin; i++) {
-// //         total += i;
-// //     }
-// //     return total;
-// // }
 
-// const numerosReduce = [1, 2, 3, 4, 5, 6];
-// const totalEnNumeros = numerosReduce.reduce((acumulador, elemento) => acumulador + elemento, 10);
+// REDUCE
+// const numeros = [1, 2, 3, 4, 5, 6];
+// const totalEnNumeros = numeros.reduce((acumulador, elemento) => acumulador + elemento, 0);
 // console.log(totalEnNumeros);
 
-// //SORT ES DESTRUCTIVO
-// // Ordena de menor a mayor o de menor a mayor
-// const numerosDesordenados = [991, 12, 43, 1, 1000, 6];
-// console.log(numerosDesordenados);
-// numerosDesordenados.sort((a,b) => a-b); // FORMA ASCENDENTE
-// console.log(numerosDesordenados);
-// numerosDesordenados.sort((a,b) => b-a); // FORMA DESCENDENTE
-// console.log(numerosDesordenados);
 
-// // sort usando objetos
+// MAP
 
-// const cursosConSort = [ // es un array de objetos
-//     { nombre: "JavaScript", cantidaAlumnos: 120 },
-//     { nombre: "JavaScript", cantidaAlumnos: 130 },
-//     { nombre: "React", cantidaAlumnos: 90 },
-//     { nombre: "PHP", cantidaAlumnos: 60 },
-// ];
+// const cursosConMap = cursos.map((elemento) => elemento.nombre)
+// console.log(cursosConMap.join(", "));
+// JS, ReactJS, HTML, JAVA
 
-// cursosConSort.sort((a,b) =>{
-//     if(a.nombre > b.nombre){
-//         return 1;
-//     }
-//     if(a.nombre < b.nombre){
-//         return -1;
-//     }
-//     return 0;
-// })
-// console.log(cursosConSort);
+// SOME
+// const resultado1 = cursos.some((elemento) => elemento.nombre === "JS");
+// console.log(resultado1); // {nombre: 'JS', precio: 150000}
+// const resultado2 = cursos.some((elemento) => elemento.nombre === "jS"); // undefined
+// console.log(resultado2); // undefined
+// const resultado3 = cursos.some((elemento) => elemento.nombre === "DW");
+// console.log(resultado3); // undefined
 
-// cursosConSort.sort((a,b) =>{
-//     if(a.cantidaAlumnos > b.cantidaAlumnos){
-//         return 1;
-//     }
-//     if(a.cantidaAlumnos < b.cantidaAlumnos){
-//         return -1;
-//     }
-//     return 0;
-// })
-// console.log(cursosConSort);
+
+// const actPrecio = cursos.map(elemento => {
+//     return{
+//         nombre: elemento.nombre,
+//         nuevoPrecio: elemento.precio + 5555
+//     }}
+// )
+// console.log(cursos);
+// console.log(actPrecio)
+
+
+// // FILTER
+// const resultadoFilter = cursos.filter((elemento) => elemento.nombre.includes("JS"));
+// console.log(resultadoFilter);
+
+
+
+// // FIND
+// const resultado1 = cursos.find((elemento) => elemento.nombre === "JS");
+// console.log(resultado1); // {nombre: 'JS', precio: 150000}
+// const resultado2 = cursos.find((elemento) => elemento.nombre === "jS");
+// console.log(resultado2); // undefined
+// const resultado3 = cursos.find((elemento) => elemento.nombre === "DW");
+// console.log(resultado3); // undefined
