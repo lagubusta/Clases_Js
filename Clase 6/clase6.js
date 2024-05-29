@@ -25,13 +25,13 @@
 
 // const arrayMixto = ["a", 'Hola', 2] //tipo mixto.
 // const arrayObjetos = [
-    // { nombre: "Productos1", cantidad: 8 },
-    // { nombre: "Productos2", cantidad: 9 }
+// { nombre: "Productos1", cantidad: 8 },
+// { nombre: "Productos2", cantidad: 9 }
 //] // Tipo Objetos
 
 // const arrayMixtoConObjetos = [
-    // "a", 'Hola', 2,
-    // { nombre: "Productos1", cantidad: 8 },
+// "a", 'Hola', 2,
+// { nombre: "Productos1", cantidad: 8 },
 
 //] // tipo mixto con objetos.
 
@@ -119,56 +119,70 @@
 // console.log(arrayConString.reverse());
 
 // --------------
+
 // const arrayObjetosAgregados = [
 //     {nombre: 1, cantidad: 5},
 //     {nombre: 2, cantidad: 8},
 // ];
 // arrayObjetosAgregados.push({nombre: "Producto3", cantidad: 2});
-// console.log(arrayObjetos);
+// console.log(arrayObjetosAgregados);
 
 // -------------- FOR OF
 // defino una variable y toma los atributos de productos y se los guarda
 // const productos = [
-//     {id: 1, nombre: "Arroz"},
-//     {id: 2, nombre: "Pollo"}
-//     {id: 3, nombre: "Carne"}
+//     { id: 1, nombre: "Arroz" },
+//     { id: 2, nombre: "Pollo" },
+//     { id: 3, nombre: "Carne" }
 // ]
 // for (const index of productos){
-//     console.log("El ID es: " + index.id);
-//     console.log("El nombre del producto es: " + index.nommbre);
+//     // console.log("El ID es: " + index.id);
+//     // console.log("El nombre del producto es: " + index.nombre);
 
-// }
 
-// class Producto {
-//     constructor(nombre, precio, id) {
-//         this.nombre = nombre.toUpperCase();
-//         this.precio = parseFloat(precio);
-//         this.id = id;
-// }        
-//         sumarIva () {
-//             this.precio = this.precio * 1.21;
-// }
+//     console.log(index);
 // }
 
 
 
-// const carrito = [];
 
-// console.log(carrito);
-// carrito.push(new Producto(1,"Yerba", 1000.5));
-// carrito.push(new Producto(2,"Azucar", 1200));
-// carrito.push(new Producto(3,"Matambre", 200));
-// console.log(carrito);
+class Producto {
+    constructor(id, nombre, precio) {
+        this.id = id;
+        this.nombre = nombre.toUpperCase();
+        this.precio = parseFloat(precio);
+    }
+    sumarIva(){
+        this.precio = this.precio *1.21;
+    }
+}
 
-// for (const porCadaProdcuto of carrito){
-//     carrito.sumarIVA();
-// }
+const carrito = [];
+console.log(carrito);
+
+carrito.push(new Producto("#COD1", "Arroz", 100));
+carrito.push(new Producto("#COD2", "Leche", 200));
+carrito.push(new Producto("#COD3", "Carne", 300));
+console.log(carrito);
+
+// para sumar iva  a todos los productos
+
+
+// porCadaProducto vendría a ser el "index" y "evaluamos" carrito.
+for (const porCadaProducto of carrito){
+//entonces por cada producto que apareza en carrito, le va a sumar el iva.
+    porCadaProducto.sumarIva();
+}
+
+
+
+
+
 
 
 
 // --------------------------------------------------------------
-                // EJERECICIOS CLASE 6
-                // Ejercicios Integrados de JavaScript con Objetos, Clases y Arrays
+// EJERECICIOS CLASE 6
+// Ejercicios Integrados de JavaScript con Objetos, Clases y Arrays
 // --------------------------------------------------------------
 
 //----------------- Objetos y Obtener Valores con Arrays
