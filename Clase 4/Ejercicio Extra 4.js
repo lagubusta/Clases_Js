@@ -13,8 +13,8 @@
 // function procesamiento (valor){
 //     return("La entrada es " + valor);
 // }
-//C-
-// function salida(valor){
+// C-
+// function salida(valor){  
 //     alert(valor);
 // }
 // D-

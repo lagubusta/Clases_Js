@@ -1,3 +1,13 @@
+// TODOS LOS EJERCICIOS ESTAN RESUELTOS
+//-------------------------------------------------------------------------------------
+//
+//-------------- Variables -------------I-
+//-------------------------------------------------------------------------------------
+
+
+
+
+
 class Producto {
     constructor(nombre, descripcion, categoria, precio, stock){
 this.nombre = nombre;
