@@ -1,3 +1,26 @@
+function mayorQue(n){
+    return (m) => m > n
+}
+
+let mayorQueDiez = mayorQue(10);
+console.log(mayorQueDiez(20));
+console.log(mayorQueDiez(8));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // esta funcion es global ya que puse como nombre "inicio" y "fin" se puede usar en cualquier parte del codigo.
 
@@ -92,91 +115,91 @@
 
 // console.log(nuevoArray);
 
-//----------------metodo Find
+// //----------------metodo Find
 
-const cursos = [ // es un array de objetos
-    { nombre: "JavaScript", cantidaAlumnos: 120 },
-    { nombre: "JavaScript", cantidaAlumnos: 130 },
-    { nombre: "React", cantidaAlumnos: 90 },
-    { nombre: "PHP", cantidaAlumnos: 60 },
-];
+// const cursos = [ // es un array de objetos
+//     { nombre: "JavaScript", cantidaAlumnos: 120 },
+//     { nombre: "JavaScript", cantidaAlumnos: 130 },
+//     { nombre: "React", cantidaAlumnos: 90 },
+//     { nombre: "PHP", cantidaAlumnos: 60 },
+// ];
 
-const resultadoFind = cursos.find((elemento) => elemento.nombre === "JavaScript");
-console.log(resultadoFind);
-// Filter
-const resultadoFilter = cursos.filter((elemento) => elemento.nombre.includes === "JavaScript");
-console.log(resultadoFilter);
+// const resultadoFind = cursos.find((elemento) => elemento.nombre === "JavaScript");
+// console.log(resultadoFind);
+// // Filter
+// const resultadoFilter = cursos.filter((elemento) => elemento.nombre.includes === "JavaScript");
+// console.log(resultadoFilter);
 
-// const resultadoSome = cursos.some ((elemento) => elemento.nombre.some === )
-
-
-// MAP
-//Genera un nuevo array con lo que le digo que quiero
-
-const resultadoMap = cursos.map((elemento) => elemento.nombre);
-console.log(resultadoMap);
-//Usando map busco y acutalizo nuevos "datos"
-const actualizarCantidadDeAlumnos = cursos.map((elemento) => {
-    return {
-        nombreNuevo: elemento.nombre,
-        cantidadNueva: elemento.cantidaAlumnos + 20
-    }
-})
-console.log(actualizarCantidadDeAlumnos);
+// // const resultadoSome = cursos.some ((elemento) => elemento.nombre.some === )
 
 
-// Reduce
+// // MAP
+// //Genera un nuevo array con lo que le digo que quiero
 
-//ACUMULA COMO ESTO
-// function sumarRango(inicio, fin){
-
-//     let total = 0;
-//     for (let i = inicio; i <= fin; i++) {
-//         total += i;
+// const resultadoMap = cursos.map((elemento) => elemento.nombre);
+// console.log(resultadoMap);
+// //Usando map busco y acutalizo nuevos "datos"
+// const actualizarCantidadDeAlumnos = cursos.map((elemento) => {
+//     return {
+//         nombreNuevo: elemento.nombre,
+//         cantidadNueva: elemento.cantidaAlumnos + 20
 //     }
-//     return total;
-// }
+// })
+// console.log(actualizarCantidadDeAlumnos);
 
-const numerosReduce = [1, 2, 3, 4, 5, 6];
-const totalEnNumeros = numerosReduce.reduce((acumulador, elemento) => acumulador + elemento, 10);
-console.log(totalEnNumeros);
 
-//SORT ES DESTRUCTIVO
-// Ordena de menor a mayor o de menor a mayor
-const numerosDesordenados = [991, 12, 43, 1, 1000, 6];
-console.log(numerosDesordenados);
-numerosDesordenados.sort((a,b) => a-b); // FORMA ASCENDENTE
-console.log(numerosDesordenados);
-numerosDesordenados.sort((a,b) => b-a); // FORMA DESCENDENTE
-console.log(numerosDesordenados);
+// // Reduce
 
-// sort usando objetos
+// //ACUMULA COMO ESTO
+// // function sumarRango(inicio, fin){
 
-const cursosConSort = [ // es un array de objetos
-    { nombre: "JavaScript", cantidaAlumnos: 120 },
-    { nombre: "JavaScript", cantidaAlumnos: 130 },
-    { nombre: "React", cantidaAlumnos: 90 },
-    { nombre: "PHP", cantidaAlumnos: 60 },
-];
+// //     let total = 0;
+// //     for (let i = inicio; i <= fin; i++) {
+// //         total += i;
+// //     }
+// //     return total;
+// // }
 
-cursosConSort.sort((a,b) =>{
-    if(a.nombre > b.nombre){
-        return 1;
-    }
-    if(a.nombre < b.nombre){
-        return -1;
-    }
-    return 0;
-})
-console.log(cursosConSort);
+// const numerosReduce = [1, 2, 3, 4, 5, 6];
+// const totalEnNumeros = numerosReduce.reduce((acumulador, elemento) => acumulador + elemento, 10);
+// console.log(totalEnNumeros);
 
-cursosConSort.sort((a,b) =>{
-    if(a.cantidaAlumnos > b.cantidaAlumnos){
-        return 1;
-    }
-    if(a.cantidaAlumnos < b.cantidaAlumnos){
-        return -1;
-    }
-    return 0;
-})
-console.log(cursosConSort);
+// //SORT ES DESTRUCTIVO
+// // Ordena de menor a mayor o de menor a mayor
+// const numerosDesordenados = [991, 12, 43, 1, 1000, 6];
+// console.log(numerosDesordenados);
+// numerosDesordenados.sort((a,b) => a-b); // FORMA ASCENDENTE
+// console.log(numerosDesordenados);
+// numerosDesordenados.sort((a,b) => b-a); // FORMA DESCENDENTE
+// console.log(numerosDesordenados);
+
+// // sort usando objetos
+
+// const cursosConSort = [ // es un array de objetos
+//     { nombre: "JavaScript", cantidaAlumnos: 120 },
+//     { nombre: "JavaScript", cantidaAlumnos: 130 },
+//     { nombre: "React", cantidaAlumnos: 90 },
+//     { nombre: "PHP", cantidaAlumnos: 60 },
+// ];
+
+// cursosConSort.sort((a,b) =>{
+//     if(a.nombre > b.nombre){
+//         return 1;
+//     }
+//     if(a.nombre < b.nombre){
+//         return -1;
+//     }
+//     return 0;
+// })
+// console.log(cursosConSort);
+
+// cursosConSort.sort((a,b) =>{
+//     if(a.cantidaAlumnos > b.cantidaAlumnos){
+//         return 1;
+//     }
+//     if(a.cantidaAlumnos < b.cantidaAlumnos){
+//         return -1;
+//     }
+//     return 0;
+// })
+// console.log(cursosConSort);
