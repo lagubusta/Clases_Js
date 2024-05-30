@@ -1,217 +1,111 @@
-// PENDIENTES DE HACER: 11, 12, 13, 14, 25
-//-------------------------------------------------------------------------------------
-//-------------- Objetos y Clases -------------I-
-//-------------------------------------------------------------------------------------
 
 
-
-
-//Metodos corresponden a función dentro de un objeto. objeto perro. método ladrar
-
-
-//------------------------------ARRAYS
-
-// cada producto en un carrito de compras es un "objeto".
-
-//------------DECLARACION DEL ARRAY
-// Siempre que se define array es en una constante
-
-// Cada valor dentro del array tiene una posicion. Arranca por el valor 0.
-// se "busca" así
-// console.log(arrayNumerico[3]);
-
-// const arrayVacio = [];
-// Array no se puede remplazar con otro tipo de dato.
-
-// const arrayNumerico = [1, 2, 3, 4, 5, 6.5]; // Tipo numerico.
-
-// const arrayConLetras = ['a', 'b', 'c',] // tipo caracter se completa con ' '.
-
-// const arrayConString = ["Hola", "mundo","como", "estas?"]; //Tipo String se completa con "".
-
-// const arrayBooleano = [true, false, true]; // Tipo booleano.
-
-// const arrayMixto = ["a", 'Hola', 2] //tipo mixto.
-// const arrayObjetos = [
-// { nombre: "Productos1", cantidad: 8 },
-// { nombre: "Productos2", cantidad: 9 }
-//] // Tipo Objetos
-
-// const arrayMixtoConObjetos = [
-// "a", 'Hola', 2,
-// { nombre: "Productos1", cantidad: 8 },
-
-//] // tipo mixto con objetos.
-
-// console.log(arrayNumerico[8]);
-
-
-// USAR < despues del let
-// for (let index = 0; index < 5; index++) {
-//     //alert(arrayNumerico[index]);
-// }
-
-// for (let index = 0; index < 5; index++) {
-//     console.log(arrayNumerico[index]);
-// }
-
-//---------------METODOS Y PROPIEDADES
-//Length
-//Sirve para saber cuantos datos estoy guardandoa dentro de un array.
-
-// console.log([arrayNumerico.length]);
-
-// DE ESTA FORMA ME ASEGURO QUE CUENTE TODO LO QUE ESTA DENTRO DEL, EN ESTE CASO, ARRAYNUMERICO.
-// for (let index = 0; index < arrayNumerico.length; index++) {
-//     alert(arrayMixtoConObjetos[index]);
-// }
-
-//---------------------Agregar objetos
-//Para agregar elementros dentro de un array.
-
-// // agrega elemnto al final.
-// arrayMixto.push("al final"); 
-// console.log(arrayMixto);
-// // agrega elemnto al principio.
-// arrayMixto.unshift("al principio"); 
-// console.log(arrayMixto);
-
-// //-------------QUITAR ELEMENTOS
-// // Elimina el elemento del final.
-// arrayMixto.pop("al final"); 
-// console.log(arrayMixto);
-// // Elimina el elemento del principio.
-// //NO USAR "NUNCA".
-// arrayMixto.shift("al principio"); 
-// console.log(arrayMixto);
-//---------------SLICE
-// arrayMixto.splice(1, 2);
-// va a eliminar los elementos dentro de las posiciones indicadas.
-// console.log(arrayConString);
-// arrayConString.splice(2,3);
-// // el primera numero es la posicion en la que se va a parar y el segundo parametro es la cantidad que va a eliminar.
-// console.log(arrayConString);
-
-
-//-------------JOIN
-// A todo el array lo arma en un solo string, como que los "concatena".
-// const arrayConString = ["Hola", "mundo", "como", "va?"];
-// console.log(arrayConString.join(", "));
-// console.log(arrayConString.join(" "));
-// console.log(arrayConString.join(" Una frase "));
-
-//----------- CONCAT
-// console.log (arrayConString.concat(arrayMixto));
-
-//----------- SLICE
-
-// Voy a construir o generar un nuevo array, en este caso solo contiene el "mundo". Desde la posicion 1 hasta la posicion 2.
-// const nuevoArrayConString = arrayConString.slice(1, 2);
-// console.log(nuevoArrayConString);
-
-//-------------- INDEXOF
-// indica en que posicion se encuentra el "objeto".
-
-// console.log(arrayConString.indexOf("como"));
-//como se encuentra en la posicion 2.
-
-//------------- USO DE INCLUDE
-//Indica si existe o no existe un elemento dentro del array. NO DIFERENCIA MAYUSCULAS, TIENE QUE SER TAL CUAL.
-// console.log(arrayConString.includes("Hola"));
-// console.log(arrayConString.includes("como"));
-// console.log(arrayConString.includes("Mundo"));
-
-// --------------REVERSE
-// muestra las cosas alreves.
-// console.log(arrayConString);
-// console.log(arrayConString.reverse());
-
-// --------------
-
-// const arrayObjetosAgregados = [
-//     {nombre: 1, cantidad: 5},
-//     {nombre: 2, cantidad: 8},
-// ];
-// arrayObjetosAgregados.push({nombre: "Producto3", cantidad: 2});
-// console.log(arrayObjetosAgregados);
-
-// -------------- FOR OF
-// defino una variable y toma los atributos de productos y se los guarda
-// const productos = [
-//     { id: 1, nombre: "Arroz" },
-//     { id: 2, nombre: "Pollo" },
-//     { id: 3, nombre: "Carne" }
-// ]
-// for (const index of productos){
-//     // console.log("El ID es: " + index.id);
-//     // console.log("El nombre del producto es: " + index.nombre);
-
-
-//     console.log(index);
-// }
-
-
-
-
-class Producto {
-    constructor(id, nombre, precio) {
-        this.id = id;
-        this.nombre = nombre.toUpperCase();
-        this.precio = parseFloat(precio);
-    }
-    sumarIva(){
-        this.precio = this.precio *1.21;
-    }
-}
-
-const carrito = [];
-console.log(carrito);
-
-carrito.push(new Producto("#COD1", "Arroz", 100));
-carrito.push(new Producto("#COD2", "Leche", 200));
-carrito.push(new Producto("#COD3", "Carne", 300));
-console.log(carrito);
-
-// para sumar iva  a todos los productos
-
-
-// porCadaProducto vendría a ser el "index" y "evaluamos" carrito.
-for (const porCadaProducto of carrito){
-//entonces por cada producto que apareza en carrito, le va a sumar el iva.
-    porCadaProducto.sumarIva();
-}
-
-
-
-
-
-
-
-
-// --------------------------------------------------------------
-// EJERECICIOS CLASE 6
 // Ejercicios Integrados de JavaScript con Objetos, Clases y Arrays
-// --------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------- Objetos y Obtener Valores con Arrays -------------I-
+//-------------------------------------------------------------------------------------
+// 1. Crea un array de objetos llamado personas, donde cada objeto represente a una persona con las propiedades nombre, edad y ciudad. Imprime en la consola el nombre de la primera persona del array.
+// const personas = [
+//     { nombre: "Agustin", edad: 30, ciudad: "Buenos Aires", },
+//     { nombre: "Sofia", edad: 24, ciudad: "Benavidez", },
+//     { nombre: "Mateo", edad: 31, ciudad:"San Isidro", },
+//     { nombre: "Ines", edad: 27, ciudad: "Beccar", },
+// ];
+// console.log(personas[0]);
 
-//----------------- Objetos y Obtener Valores con Arrays
+//-------------------------------------------------------------------------------------
+// 2. Agrega un nuevo objeto al array personas que represente a otra persona con las mismas propiedades. Luego, imprime en la consola la edad de la segunda persona del array.
+//                           Descomentar ejercicio 1 para que funcione.
 
-// A- Crea un array de objetos llamado personas, donde cada objeto represente a una persona con las propiedades nombre, edad y ciudad. Imprime en la consola el nombre de la primera persona del array.
-
-//B - Agrega un nuevo objeto al array personas que represente a otra persona con las mismas propiedades. Luego, imprime en la consola la edad de la segunda persona del array.
-
-//C - Crea un array de objetos llamado autos, donde cada objeto represente un automóvil con las propiedades marca, modelo y anio. Imprime en la consola el modelo del segundo auto del array.
-
-//D - Agrega un nuevo objeto al array autos que represente otro automóvil con las mismas propiedades. Luego, imprime en la consola el año del último auto del array.
-
-// class caractPersonas{
-//     constructor (nombre, edad,ciudad) {
-//         this.nombre = nombre;
-//         this.edad = parseInt(edad);
-//         this.ciudad = ciudad;
-//     }
-// }
-
-// const personas = [];
-// personas.push(new personas = "Agustin", 30, "San Isidro");
-
+// personas.push({nombre: "Carolina", edad: 55, ciudad: "Cañuelas"});
 // console.log(personas);
+// console.log(personas[1]);
+
+//-------------------------------------------------------------------------------------
+// 3. Crea un array de objetos llamado autos, donde cada objeto represente un automóvil con las propiedades marca, modelo y anio. Imprime en la consola el modelo del segundo auto del array.
+
+// const autos = [
+//     {marca: "Audi", modelo: "A3", anio: 2024},
+//     {marca: "Ferrari", modelo: "F1", anio: 2005},
+//     {marca: "Renault", modelo: "Logan", anio: 2017},
+// ];
+// console.log(autos[1]);
+
+//-------------------------------------------------------------------------------------
+// 4. Agrega un nuevo objeto al array autos que represente otro automóvil con las mismas propiedades. Luego, imprime en la consola el año del último auto del array.
+//                           Descomentar ejercicio 3 para que funcione.
+
+// autos.push ({marca: "Mercedes", modelo: "Nax", anio: 2024});
+// console.log("El año del último auto es:", autos[autos.length -1].anio);
+//-------------------------------------------------------------------------------------
+//-------------- Objetos y Obtener Valores con Arrays -------------F-
+//-------------------------------------------------------------------------------------
+//-------------- Objetos Constructores y Constructor y New con Arrays -------------I-
+//-------------------------------------------------------------------------------------
+// 5. Crea un constructor llamado Producto con las propiedades nombre, precio y cantidad. Crea un array de productos utilizando este constructor y agrega al menos tres productos.
+
+// function Producto(nombre, precio, cantidad) {
+//     this.nombre = nombre;
+//     this.precio = precio;
+//     this.cantidad = cantidad;
+// }
+// const productos = [
+//     new Producto("Leche", 200, 50),
+//     new Producto("Mate", 300, 500),
+//     new Producto("Yerba", 1000, 100),
+// ];
+// console.log(productos);
+
+//-------------------------------------------------------------------------------------
+// 6. Crea un constructor llamado Persona con las propiedades nombre, edad y ciudad. Crea un array personas utilizando este constructor y agrega al menos tres personas.
+
+// function Persona(nombre, edad, ciudad) {
+//     this.nombre = nombre;
+//     this.edad = edad;
+//     this.ciudad = ciudad;
+// }
+// const personas = [
+//     new Persona("Agustin", 30, "Buenos Aires"),
+//     new Persona("Sofia", 24, "Benavidez"),
+//     new Persona("Mateo", 31, "San Isidro"),
+// ];
+// console.log(personas);
+
+//-------------------------------------------------------------------------------------
+// 7. Crea un constructor llamado Libro con las propiedades titulo, autor y año. Crea un array de libros utilizando este constructor y agrega al menos tres libros.
+
+// function Libro(titulo, autor, anio) {
+//     this.titulo = titulo;
+//     this.autor = autor;
+//     this.anio = anio;
+// }
+// const librosNuevo = [
+//     new Libro("Harry 1", "JKR", 2001),
+//     new Libro("A sangre fria", "Truman Capote" , 2004 ),
+//     new Libro("El cultivo", "JuaniJuana" , 2018 ),
+// ];
+// console.log(librosNuevo);
+//-------------------------------------------------------------------------------------
+//-------------- Objetos Constructores y Constructor y New con Arrays -------------F-
+//-------------------------------------------------------------------------------------
+//-------------- Uso de THIS con Arrays -------------I-
+//-------------------------------------------------------------------------------------
+// 8. Crea un objeto llamado rectangulo con las propiedades base y altura. Agrega un método llamado calcularArea que calcule y devuelva el área del rectángulo. Luego, crea un array de objetos rectangulos y calcula el área del primer rectángulo del array.
+
+// const rectangulo = {
+//     base: parseFloat(prompt("Ingresar base: ")),
+//     altura: parseFloat(prompt("Ingresar altura: ")),
+//     calcularArea: function () {
+//         return this.base * this.altura;
+//     }
+// };
+// const rectangulos = [rectangulo];
+// const areaPrimerRectangulo = rectangulos[0].calcularArea();
+// console.log(areaPrimerRectangulo);
+// rectangulos.push(2,3);
+// console.log(rectangulos);
+//-------------------------------------------------------------------------------------
+// 9. Crea un objeto llamado circulo con la propiedad radio. Agrega un método llamado calcularPerimetro que calcule y devuelva el perímetro del círculo. Luego, crea un array de objetos circulos y calcula el perímetro del segundo círculo del array.
+
+//-------------------------------------------------------------------------------------
+//-------------- Uso de THIS con Arrays -------------F-
