@@ -167,16 +167,16 @@
 
 //-------------------------------------------------------------------------------------
 // 19. Usa forEach para imprimir todos los días de la semana en inglés.
-// const diasSemana = [
-//     "Monday",
-//     "Tuesday",
-//     "Wednesday",
-//     "Thursday",
-//     "Friday",
-//     "Saturday",
-//     "Sunday"
-// ];
-// const enIngles = diasSemana.forEach(dia => console.log(dia));
+const diasSemana = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+];
+const enIngles = diasSemana.forEach(dia => console.log(dia));
 //-------------------------------------------------------------------------------------
 // 20. Utiliza sort para ordenar un array de objetos producto por precio de forma ascendente.
 
