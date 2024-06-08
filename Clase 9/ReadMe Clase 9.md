@@ -259,9 +259,260 @@ contenedores[0].innerHTML = `
 ```HTML
 <div class="contenedor">Contenedor 1</div>
 ```
+- Tengo el **classList** que es la lista de clases que tiene ese *nodo*. A su vez ese class List me permite asignar metodos ("*.add*")
 ```js
 contenedores[1].classList.add('clase_nueva');
 ```
 ```js
-<div class="contenedor lase_nueva">Contenedor 1</div>
+<div class="contenedor clase_nueva">Contenedor 1</div>
 ```
+- A esa clase nueva le puedo asignar una variable desde **JS**. Para cambiarle lo que necesito, en este caso los estilos.
+
+```js
+const claseNueva = document.getElementsByClassName('clase_nueva');
+claseNueva[0].style.color = 'red';
+```
+- En este caso tenemos un solo div al que le asignamos *clase_nueva* pero como estamos usando **getElementsByClassName** va a traer una colección de elementos que tiene un orden. Por eso el **[0]**. No importa que sea el unico elemento dentro del array, lo tengo que poner igual.
+
+- Para agregar una **ID** al mismo elemnto:
+    -  Desde js escribimos este código.
+    - No hace falta poner *.add* por que el **ID** es un elemento unico.
+```js
+claseNueva[0].id = 'nuevoID';
+```
+- Pasado en limpio todo lo que se le agrego al div: *se ve en elements en el navegadaor*
+```html
+<div class="contenedor clase_nueva" id="nuevoID" style="color: red;">
+<h5>Hola Mundo ¿Como están?</h5>
+<p>Hola a todos</p></div>
+```
+----
+##### Asignar estilos a un elemento.
+**siempre se tiene que escribir en formato 'string'**
+-Se puede trabajar sobre cualquier elemento del HTML.
+- Le asigno una varibale por ejemplo al body.
+```js
+const cuerpo = document.body;
+```
+
+- Llamamos a la variable:
+```js
+cuerpo.style.backgroundColor = 'green';
+cuerpo.style.padding = '1rem';
+```
+- De esta forma en la pantalla HTML va a mostrarse el background de color *green* y con un *padding* de *1rem*.
+
+### Agregar o sacar nodos.
+#### Creación de elementos.
+- Para crear elementos se utiliza **document.createElement()**, y se debe indicar el nombre de etiqueta HTML que representará ese elemento. *Dentro del () se tiene que poner la etiqueta. Por ej. p para agregar un parrafo*
+- Luego debe agregarse como hijo el nodo creado con **append()**, al body o al otro nodo del documento actual.
+
+#### appendChild
+**Ejemplo completo todo desde js.**
+- Creamos una constante para nuestro articulo
+```js
+const articuloDiv = document.createElement('article');
+```
+- A este articulo le puedo asignar un **ID**.
+```js
+articuloDiv.id = 'articulo';
+```
+- También le agregamos varias clases. Para separa una clase de otra se usan **,**.
+```js
+articuloDiv.classList.add('notas', 'texto');
+```
+- Hasta ahora no esta dentro del HTML, para ingresarlo tengo que usar **appendChild**.
+    - Esto hace que el la etiqueta *articel* se agregue siempre ultimo, abajado de todo lo que haya hecho hasta el momento dentro del *"padre"*, en este caso el body.
+```js
+cuerpo.appendChild(articuloDiv);
+```
+- Pasado en limpio todo el código quedaría de esta forma.
+```js
+const cuerpo = document.body;
+cuerpo.style.backgroundColor = 'green';
+cuerpo.style.padding = '1rem';
+const articuloDiv = document.createElement('article');
+articuloDiv.id = 'articulo';
+articuloDiv.classList.add('notas', 'texto');
+cuerpo.appendChild(articuloDiv);
+// En Elements del navegador quedaría:
+// <body>
+//////////// ..... mas elementos del html ya generados
+// <article id="articulo" class="notas texto"></article>
+// </body>
+```
+#### Eliminar elementos.
+- Se pueden eliminar nodos existenes y nuevos. El método **remove()** permite eliminar un nodo seleccionado del *DOM*.
+
+- Si quiero sacar el *articuloDiv* que creamos antes se hace:
+    - Esto se puede usar para remover articulos de un carrito de compras aunque hay otras formas de hacerlo.
+```js
+articuloDiv.remove();
+// En Elements del navegador quedaría:
+// <body>
+//////////// ..... mas elementos del html ya generados
+// </body>
+```
+---
+### Obtener datos de Inputs.
+- Para obtener o modificar datos de un formulario HTML desde JS, podemos hacerlo accediendo a la **propiedad value** de cada input seleccionado:
+*no confundir value con innerText*
+
+- Creamos un input:
+```js
+const ejeInput1 = document.createElement('input');
+ejeInput1.id = 'nombre';
+ejeInput1.type = 'text';
+ejeInput1.style.backgroundColor = 'grey';
+cuerpo.appendChild(ejeInput1);
+// va a ser de tipo texto, con el fondo gris para diferenciar.
+const ejeInput2 = document.createElement('input');
+ejeInput2.id = 'edad';
+ejeInput2.type = 'number';
+ejeInput2.style.backgroundColor = 'red';
+cuerpo.appendChild(ejeInput2);
+// va a ser de tipo númerico, con el fondo rojo para diferenciar.
+```
+- Vamos a acceder a estos dos elementos usando el **ID**.
+```js
+document.getElementById('nombre').value = 'Agustin';
+// En la pantalla HTML dentro del input nombre va a mostrar "Agustin".
+document.getElementById('edad').value = 30;
+// En la pantalla HTML dentro del input edad va a mostrar "30".
+```
+- Esto value se pueden borrar en la pantalla pero cuando acualizo van a volver a aparecer. Es una especie de por defecto. 
+- Esto se puede usar para un carrito de compras. Agregué cosas, me pongo a hacer algo y cuando vuelvo al carrito siguen estando lo ingresado. **Esto se llama persistencia de datos**.
+
+### Crear una barra de navegación.
+- Agregamos etiqueta <header> al html con su ID que va a ser header.
+- Creamos variables cabecera, navegación nav y ul.
+```js
+const cabecera = document.getElementById('header');
+const navegacion = document.createElement('navBar');
+const nav = document.createElement ('nav');
+const ul = document.createElement ('ul');
+```
+- Ahora hay que "juntar" todo.
+    - Cabecer sería el padre de todos, le sigue navegación, despues nav y por ultimo ul
+```js
+cabecera.appendChild(navegacion);
+navegacion.appendChild(nav);
+nav.appendChild(ul);
+```
+- A navegación le vamos a asignar una clase.
+```js
+navegacion.className = 'navbar';
+```
+- Creamos un array *links* para tener la lista de los "titulos".
+```js
+const links = ["Index", "Products", "Contact"];
+```
+- Ahora vamos a reccorer el array **links** usando **for..of**.
+- Por cada *link* de *links* va a:
+    - Primero crear un **li**.
+    - Por cada li creado va a hacer un **innerHTML**.
+    - Vamos a usar **``**, esto permite el uso de información **literal**.
+    - Dentro de los **``** vamos a hacer un *<a href="">* que me va a dirigir a algún lado. 
+    - Para guardar el *link* de formar literl hay que ponerlo dentro de **${}**. También quiero que haga lo mismo con cada href, pero dentro del array los elementos empiezan con Mayúscula ("Products"), para eso usamos metodo **toLocaleLowerCase** para que lo pase a minúscula.
+    - Creamos los *ul*.
+
+```js
+for (const link of links){
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="${link.toLocaleLowerCase()}.html">${link}
+    </a>`
+    ul.appendChild(li);
+}
+```
+- Con todo esto la barra de navegación ya esta creada, cada uno de los elementos va a ser del array va a aparecer con su link para llevarlo a la pagina correspondiente, pero no van a funcinar hasta que no se creen las páginas en el HTML.
+
+- Cambiar el estilo a la barra de navegación.
+```js
+cabecera.style.backgroundColor = 'pink';
+cabecera.style.width = '100%';
+ul.style.color = 'white';
+```
+### Plantillas Literales.
+
+- Creamos un objeto productos.
+```js
+const producto = {
+    id: 1,
+    nombre: "Azucar",
+    precio: 1050.56,
+}
+```
+- Creamos un elemento div para que sea el contenedor.
+- Agregamos ese div al body.
+- Armamos la variable con lo que va a imprimir en pantalla, todo lo que esta dentro de los **``**.
+- Dentro de los **${}** vamos a llamar a cada valor del objeto *(producto.nombre)*.
+- Creamos el contenedor de nuestro "console.log", *h4*.
+- Usamos el innerHTML para que pase el resultado de nuestra variable "literal".
+- Asignamos el *h4* para que sea hijo del div y se pueda imprimir todo.
+
+```js
+const divProducto = document.createElement('div');
+cuerpo.appendChild(divProducto);
+let literal = `ID ${producto.id} - Nombre: ${producto.nombre} - Precio: $${producto.precio}`;
+const textoH4 = document.createElement('h4');
+textoH4.innerHTML = literal;
+divProducto.appendChild(textoH4);
+```
+---
+##### Mismo ejemplo usando array.
+- Tenemos el divProducto ya en el body.
+- Usamos **for of** para recorrer todo el *array* y para cada producto que encuentre genere un **h4** que imprimra toda la información que le pido.
+```js
+cuerpo.appendChild(divProducto);
+for (const producto of productos){
+    let literal = `ID ${producto.id} - Nombre: ${producto.nombre} - Precio: $${producto.precio}`;
+const textoH4 = document.createElement('h4');
+textoH4.innerHTML = literal;
+divProducto.appendChild(textoH4);
+}
+```
+### Query Selector
+- El método **querySelector()** nos permite seleccionar nodos con la misma sintaxis que utilizamos en los selectores de CSS.
+- Es similar al getElementById por que el *querySelector()* va a tomar un solo elemento.
+
+```html
+<articulo id="articulo__">
+        <p class="parrafo__"></p>
+    </articulo>
+```
+- Puedo seleccionar la etiqueta <p> siguiendo la sintaxis de CSS para selectores:
+- Llamo al hijo.
+```js
+let parrafo = document.querySelector('#articulo__ p');
+```
+- Seleccionar sólo el contenedor por id con #.
+- Llamo al papá.
+```js
+let parrafo = document.querySelector('#articulo__');
+```
+- O puedo seleccionar por clase.
+- Va a tomar el primer "texto" que tenga esta clase. Por que el querySelector es unico.
+```js
+parrafo = document.querySelector(".texto");
+```
+### Query SelectorAll
+- De los ejemplos anteriores tenemos estos div con clase contenedor.
+```html
+<div class="contenedor">Contenedor 1</div>
+<div class="contenedor">Contenedor 2</div>
+<div class="contenedor">Contenedor 3</div>
+```
+- Con querySelectorAll busca todos los elementos que, en este caso, tenga la misma clase.
+```js
+let contenedoresConQuery = document.querySelectorAll('.contenedor');
+console.log(contenedoresConQuery);
+
+// en este caso imprime en pantalla de conosola
+// NodeList(4) [div#nuevoID.contenedor.clase_nueva, div.contenedor, div.contenedor, div.contenedor]
+// 0: div#nuevoID.contenedor.clase_nueva
+// 1: div.contenedor
+// 2: div.contenedor
+// 3: div.contenedor
+// length: 4
+```
+- Dice que tenemos cuatro elementos (div) que tienen el mismo nombre de clase (contenedor).
