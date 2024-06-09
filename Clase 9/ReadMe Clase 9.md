@@ -412,7 +412,7 @@ const links = ["Index", "Products", "Contact"];
     - Primero crear un **li**.
     - Por cada li creado va a hacer un **innerHTML**.
     - Vamos a usar **``**, esto permite el uso de información **literal**.
-    - Dentro de los **``** vamos a hacer un *<a href="">* que me va a dirigir a algún lado. 
+    - Dentro de los **``** vamos a hacer un *< a href="" >* que me va a dirigir a algún lado. 
     - Para guardar el *link* de formar literl hay que ponerlo dentro de **${}**. También quiero que haga lo mismo con cada href, pero dentro del array los elementos empiezan con Mayúscula ("Products"), para eso usamos metodo **toLocaleLowerCase** para que lo pase a minúscula.
     - Creamos los *ul*.
 
