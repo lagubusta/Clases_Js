@@ -117,19 +117,48 @@ input1.addEventListener('input', () => {
 ```
 ### Evento submit
 - El evento submit se activa cuando el formulario es enviado. Normalmente se utiliza para validar el formulario antes de ser enviado al servidor o bien para abortar el envío y procesarlo con JavaScript.
+**En pagina contacto**
 ```html
-<form id="formulario">
-        <input type="text">
-        <input type="number">
-        <input type="submit" value="Enviar">
-</form>
+    <main id="mainContact"> 
+        <h1> Contacto</h1>
+        <form id="formulario">
+            <label for="">Ingrese su Nombre</label>
+            <input type="text" id="nombreForm">
+            <label for="">Ingrese su Edad</label>
+            <input type="number" id="edadForm">
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
 ```
 ```js
 let miFormulario = document.getElementById("formulario");
-miFormulario.addEventListener("submit", validarFormulario);
-
-function validarFormulario(e) {
+const nombreForm = document.getElementById('nombreForm');
+const edadForm = document.getElementById('edadForm');
+const mainContact = document.getElementById('mainContact');
+const divContact = document.createElement('div');
+const textContact = document.createElement('h4');
+mainContact.appendChild(divContact);
+miFormulario.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log("Formulario Enviado");
-}
+    divContact.appendChild(textContact);
+    textContact.innerHTML = `La edad ingresada de ${nombreForm.value} es ${edadForm.value}`;
+})
+```
+##### Ejemplo de evento de mouse, como hover.
+*En la pagina indexC10*
+- Cremamos dos eventos para el botón que ya teniamos generado.
+- Cuando arranque la página el botón va a parecer de color amarillo y letras negras.
+- Cuando ponga el mause por encima, va a cambiar a color rosa con letras negras.
+- Cuando saco el mouse del botón va a volverse Gris con letras blancas, pero si vuelvo a pasar el mouse por encima va a volver a ser Rosa.
+- Para que vuelva a ser amarillo como "venia por defecto" (estilo que le había pueso al principio), tengo que acualizar la página.
+```js
+boton.addEventListener('mouseover', () => {
+    boton.style.color = 'black';
+    boton.style.backgroundColor ='pink';
+});
+
+boton.addEventListener('mouseout', () => {
+    boton.style.color = 'white';
+    boton.style.backgroundColor ='grey';
+});
 ```

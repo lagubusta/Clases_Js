@@ -23,17 +23,30 @@ boton.style.fontSize = '1.2rem'
 // });
 
 // Asignar evento  Opción 2: .on
-boton.onclick = () => {
-    boton.style.backgroundColor = 'red';
+// boton.onclick = () => {
+//     boton.style.backgroundColor = 'red';
+//     boton.style.color = 'white';
+// }
+
+boton.addEventListener('mouseover', () => {
+    boton.style.color = 'black';
+    boton.style.backgroundColor ='pink';
+});
+
+boton.addEventListener('mouseout', () => {
     boton.style.color = 'white';
-}
+    boton.style.backgroundColor ='grey';
+});
 
 
-//CODIGO JS
-let miFormulario = document.getElementById("formulario");
-miFormulario.addEventListener("submit", validarFormulario);
 
-function validarFormulario(e) {
-    e.preventDefault();
-    console.log("Formulario Enviado");
-}
+// ##### Ejemplo de evento de mouse
+let inicioH1 = document.getElementById('inicioH1');
+
+inicioH1.addEventListener('mouseover', () => {
+    inicioH1.style.color ='blue';
+});
+
+inicioH1.addEventListener('mouseout', () => {
+    inicioH1.style.color ='black';
+});
