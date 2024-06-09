@@ -4,7 +4,7 @@ const cabecera = document.getElementById('header');
 const navegacion = document.createElement('div'); 
 const nav = document.createElement('nav');
 const ul = document.createElement('ul');
-const links = ["Index", "Products", "Contact"];
+const links = ["indexC10", "Products", "Contact"];
 const footer = document.getElementsByTagName('footer');
 const parrafoFooter = document.createElement('p');
 const TIME = new Date().getFullYear(); // 2024
@@ -22,7 +22,6 @@ for (const link of links) {
 }
 
 cabecera.style.backgroundColor = '#c2c2c2';
-
 
 footer[0].appendChild(parrafoFooter);
 parrafoFooter.innerHTML = 'CoderHouse - ' + TIME + ' | Comisión #57705';
