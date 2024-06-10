@@ -1,5 +1,5 @@
 // PENDIENTES
-// 13, 14
+// 13, 14, 15, 22
 //-------------------------------------------------------------------------------------
 // Ejercicios de Manipulación del DOM
 //-------------------------------------------------------------------------------------
@@ -130,12 +130,180 @@
 //-------------------------------------------------------------------------------------
 // En html <!-- Ejercicio 15 -->
 // 15. Alternar una Clase en un Elemento: Usa classList.toggle para alternar la clase activo en un elemento con el ID boton.
-
-
-
-
+//-------------------------------------------------------------------------------------
+// Crear y Manipular Listas
 //-------------------------------------------------------------------------------------
 // En html <!-- Ejercicio  -->
+
+// 16. Crear una Lista Desordenada y Añadirla al Cuerpo: Usa createElement para crear una lista <ul> y añade varios elementos <li> con texto, luego añade la lista al cuerpo del documento.
+
+// const cuerpo = document.body;
+
+// const contenedorListaa = document.getElementById('contenedorLista');
+// const ulContenedor = document.createElement('ul');
+// contenedorListaa.appendChild(ulContenedor);
+// for (let i = 1 ; i<= 3; i++){
+//     const nuevoLi = document.createElement('li');
+//     nuevoLi.textContent = `Objeto ${i} `;
+//     ulContenedor.appendChild(nuevoLi);
+// }
+//-------------------------------------------------------------------------------------
+// En html <!-- Ejercicio 17 -->
+// 17. Crear una Lista Ordenada y Añadirla al Cuerpo: Usa createElement para crear una lista <ol> y añade varios elementos <li> con texto, luego añade la lista al cuerpo del documento.
+
+// const cuerpo = document.body;
+// const divConte = document.createElement ('div');
+// divConte.id = 'idDivConte'
+// const listaOrdenada = document.createElement ('ol');
+// listaOrdenada.id = 'idLista'
+// cuerpo.appendChild(divConte);
+// divConte.appendChild(listaOrdenada);
+// for (let i = 1; i<= 6; i++){
+//     const nuevoItem = document.createElement('h5');
+//     nuevoItem.textContent = `Item: ${i}`
+//     listaOrdenada.appendChild(nuevoItem);
+// }
+//-------------------------------------------------------------------------------------
+// En html <!-- Ejercicio 18 -->
+// 18. Generar una Lista a partir de un Array: Dado un array de nombres, usa un bucle para crear una lista <ul> y añade un <li> por cada nombre en el array, luego añade la lista al cuerpo del documento.
+
+// const cuerpo = document.body;
+// const listaNombres = ['Agustin', 'Sofia', 'Mateo', 'Ines'];
+// const divContenedor = document.createElement('div');
+// divContenedor.id = 'idDivContenedor';
+// const ulContendedor = document.createElement('ul');
+// ulContendedor.id = 'idUlContenedor';
+// cuerpo.appendChild(divContenedor);
+// divContenedor.appendChild(ulContendedor);
+
+// listaNombres.forEach((nombre) => {
+//     const liContendedor = document.createElement('li');
+//     liContendedor.textContent = nombre;
+//     ulContendedor.appendChild(liContendedor);
+// })
+//-------------------------------------------------------------------------------------
+// En html <!-- Ejercicio 19 -->
+// 19. Añadir un Elemento a una Lista Existente: Usa createElement y appendChild para añadir un nuevo <li> a una lista <ul> existente con el ID lista.
+
+// const nuevoElemento = document.createElement('li');
+// const lista = document.getElementById('lista');
+// lista.appendChild('nuevoElemento');
+
+// nuevoElemento.textContent = 'este es el nuevo elemento creado';
+
+//-------------------------------------------------------------------------------------
+// En html <!-- Ejercicio 20 -->
+// Eliminar el Último Elemento de una Lista: Usa removeChild para eliminar el último <li> de una lista <ul> con el ID lista.
+
+// const lista = document.getElementById('ulId');
+// console.log(lista.innerText);
+// const ultimoElemento = lista.lastElementChild;
+// lista.removeChild(ultimoElemento);
+// console.log(lista.innerText);
+//-------------------------------------------------------------------------------------
+// Ejercicios Intermedios
+//-------------------------------------------------------------------------------------
+// En html <!-- Ejercicio  -->
+// 21. Crear una Lista de Tareas: Crea un formulario con un campo de texto y un botón que permita añadir elementos a una lista de tareas. Cada tarea debe tener un botón para eliminarla.
+
+// const cuerpo = document.body;
+
+// // div
+// const contenedor = document.createElement ('div');
+// contenedor.id = 'contenedor';
+// cuerpo.appendChild(contenedor);
+// // form
+// const formulario = document.createElement('form');
+// formulario.id ='formulario';
+// contenedor.appendChild(formulario);
+// // ul
+// const ul = document.createElement ('ul');
+// ul.id = 'ul';
+// formulario.appendChild(ul);
+// // li
+// const li = document.createElement ('li');
+// li.id = 'li';
+// ul.appendChild(li);
+// // input texto
+// const inputNombre = document.createElement('input');
+// inputNombre.id =('idInput');
+// inputNombre.type = 'text';
+// li.appendChild(inputNombre);
+// // boton enviar
+// const boton = document.createElement('button');
+// boton.textContent = 'Enviar';
+// boton.id='idBoton';
+// li.appendChild(boton);
+//-------------------------------------------------------------------------------------
+// En html <!-- Ejercicio 22 -->
+// 22. Crear una Galería de Imágenes: Crea un array de URLs de imágenes y usa un bucle para crear una galería de imágenes en el DOM. Cada imagen debe estar dentro de un contenedor <div>.
+
+// const arrayUrl = [];
+// const cuerpo = document.body;
+// const galeria = document.createElement('section');
+// cuerpo.appendChild(galeria);
+// const divContenedor = document.createElement('div');
+// galeria.appendChild(divContenedor);
+
+// for( let i = 1 ; i<=5; i++){
+//     const nuevImagen = document.createElement('img');
+//     nuevImagen.alt = `Imagen nro ${i}`;
+//     divContenedor.appendChild = nuevImagen;
+// };
+//-------------------------------------------------------------------------------------
+// En html <!-- Ejercicio 23 -->
+// 23. Crear una Tabla Dinámica: Crea una tabla con una fila de encabezado y varias filas de datos generadas a partir de un array de objetos. Añade la tabla al cuerpo del documento.
+
+// const datos = [
+//     { nombre: "Juan", edad: 30 },
+//     { nombre: "María", edad: 25 },
+//     { nombre: "Carlos", edad: 35 },
+// ];
+// const tabla = document.createElement("table");
+// const encabezado = document.createElement("tr");
+// for (const key in datos[0]) {
+//     const th = document.createElement("th");
+//     th.textContent = key;
+//     encabezado.appendChild(th);
+// }
+// tabla.appendChild(encabezado);
+// datos.forEach((dato) => {
+//     const fila = document.createElement("tr");
+//     for (const key in dato) {
+//         const celda = document.createElement("td");
+//         celda.textContent = dato[key];
+//         fila.appendChild(celda);
+//     }
+//     tabla.appendChild(fila);
+// });
+// document.body.appendChild(tabla);
+
+//-------------------------------------------------------------------------------------
+// En html <!-- Ejercicio 24 -->
+// 24. Formulario de Registro: Crea un formulario de registro con campos de texto para nombre, email y contraseña. Al enviar el formulario, muestra un mensaje de bienvenida que incluya el nombre ingresado.
+
+const cuerpo = document.body;
+const formulario = document.createElement('form');
+cuerpo.appendChild(formulario);
+
+
+const nombreEncabezados = ['Nombre', 'Mail', 'Contraseña'];
+nombreEncabezados.forEach((nombre) => {
+    const encabezado = document.createElement('h3');
+    const inputt = document.createElement('input');
+    encabezado.textContent = nombre;
+    formulario.appendChild(encabezado);
+    formulario.appendChild(inputt);
+});
+
+const boton = document.createElement ('button');
+boton.textContent = ('enviar');
+formulario.appendChild(boton);
+
+
+
+
+
 //-------------------------------------------------------------------------------------
 // En html <!-- Ejercicio  -->
 //-------------------------------------------------------------------------------------
