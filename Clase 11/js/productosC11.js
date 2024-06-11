@@ -41,19 +41,52 @@
 
 ////// jason
 
-const productos = {
-    id: 1,
-    nombre: "Azucar",
-    precio: 1080,
+// const productos = {
+//     id: 1,
+//     nombre: "Azucar",
+//     precio: 1080,
+// }
+// const productosJSON = JSON.stringify(productos);
+
+// // console.log(productos);
+// // console.log(productosJSON);
+
+
+// localStorage.setItem ('prodcutos', productosJSON);
+
+// const prodcutosOBJECT = JSON.parse(productosJSON);
+// // console.log(prodcutosOBJECT);
+// // console.log(productosJSON);
+
+// const productoRecuperadoDelLocalStorage = JSON.parse(localStorage.getItem('prodcutos'))
+// console.log(productoRecuperadoDelLocalStorage);
+
+
+/////////////////////////////////////////
+
+
+const productos = [
+    {
+        id: 1,
+        nombre: "Azucar",
+        precio: 1080,
+    },
+    {
+        id: 2,
+        nombre: "Yerba",
+        precio: 1500,
+    },
+    {
+        id: 3,
+        nombre: "Dulce de Leche",
+        precio: 2800.55,
+    },
+];
+
+const guardarEnLocalStorage = (key, value)=> localStorage.setItem(key, value);
+
+for (const prodcuto of productos) {
+    guardarEnLocalStorage("Producto_" +prodcuto.id, JSON.stringify(prodcuto));
 }
-const productosJSON = JSON.stringify(productos);
 
-// console.log(productos);
-// console.log(productosJSON);
-
-
-localStorage.setItem ('prodcutos', productosJSON);
-
-const prodcutosOBJECT = JSON.parse(productosJSON);
-console.log(productosJSON);
-console.log(prodcutosOBJECT);
+guardarEnLocalStorage('productos', JSON.stringify(productos));

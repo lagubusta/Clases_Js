@@ -176,6 +176,95 @@ const prodcutosOBJECT = JSON.parse(productosJSON);
 // prodprodcutosOBJECT, usando parse formato OBJECT.
 {id: 1, nombre: 'Azucar', precio: 1080}
 ```
+---
+#### Como acceder a los atributos dentro de JSON
+- Siguiendo con el ejemplo anterior.
+```js
+productosJASON en formato JASON
+{"id":1,"nombre":"Azucar","precio":1080}
+```
+- Para acceder a los atributos de un objeto "normal" hacemos así:
+```js
+console.log(prodcutosOBJECT.id);
+// 1
+```
+- Para acceder a un JSON tengo que *parsearlo* y volverlo a un objeto, de manera directa o llamandolo directamente del **localStorage**.
+
+    - Atributo recuperado directamente del localStorage:
+    - Creo una constante nueva para mi producto a recuperar.
+    - Uso **JSON** y lo *parseo*, una vez parseado llamo al **localStorage** para que recupere el item con **getItem**.
+- Si intento acceder "normalmente" al *id* de un JSON en consola va a imprimir **undefined**. 
+```js
+const productoRecuperadoDelLocalStorage = JSON.parse(localStorage.getItem('prodcutos'))
+console.log(productoRecuperadoDelLocalStorage);
+// imprime
+// {id: 1, nombre: 'Azucar', precio: 1080}
+```
+--------------
 
 
-# FIN DE MAÑANA 11-06 MINUTO 1:05:18 DE ZOOM
+###### Ejemplo de guardar en storage un array con muchos objetos.
+
+- Creamos un array *prodcutos* con varios objetos y lo guardamos dentro del localStorage.
+```js
+const productos = [
+    {
+        id: 1,
+        nombre: "Azucar",
+        precio: 1080,
+    },
+    {
+        id: 2,
+        nombre: "Yerba",
+        precio: 1500,
+    },
+    {
+        id: 3,
+        nombre: "Dulce de Leche",
+        precio: 2800.55,
+    },
+];
+```
+- Creamos una función que va a recibir como parámetro un *key* y *value*. El **localStorage.setItem** va a gurdar esa *key* y ese *value*
+
+```js
+const guardarEnLocalStorage = (key, value)=> localStorage.setItem(key, value);
+```
+- Ahora vamos a guardar producto por producto dentro del storage.
+    - Definimos una *const* llamada *prodcuto* que por cada prodcuto dentro de *produtos* va a aplicar la función **guardarEnLocalStorage**.
+    - De este *producto* va a guardar el id, que va ser la *key*. Y usamos a JSON para que use el metodo **stringify**
+```js
+for (const prodcuto of productos) {
+    guardarEnLocalStorage(prodcuto.id, JSON.stringify(prodcuto));
+}
+```
+- Entonces en el *localStorage* va a almacenera cada **ID** como *key* y el value va a ser así.
+```js
+key: 1 value: {"id":1,"nombre":"Azucar", "precio":1080}	
+	
+key: 2 value: {"id":2,"nombre":"Yerba","precio":1500}
+	
+key: 2 value: {"id":3,"nombre":"Dulce de Leche","precio":2800.55}
+```
+- Tambien se podría poner string dentro del key, por ejemplo:
+```js
+for (const prodcuto of productos) {
+    guardarEnLocalStorage("Producto_" +prodcuto.id, JSON.stringify(prodcuto));
+}
+key: Producto_1 value: {"id":1,"nombre":"Azucar", "precio":1080}	
+	
+key: Producto_2 value: {"id":2,"nombre":"Yerba","precio":1500}
+	
+key: Producto_3 value: {"id":3,"nombre":"Dulce de Leche","precio":2800.55}
+```
+----
+- Para guardar la lista entera:
+    - Va a guardar el array completo con todos sus objetos.
+```js
+guardarEnLocalStorage('productos', JSON.stringify(productos));
+
+key: productos value: [{"id":1,"nombre":"Azucar","precio":1080},{"id":2,"nombre":"Yerba","precio":1500},{"id":3,"nombre":"Dulce de Leche","precio":2800.55}]
+```
+
+
+# PRE CLASE 11. TIEMPO ZOOM 1:20:12
