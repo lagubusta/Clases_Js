@@ -282,23 +282,89 @@
 // En html <!-- Ejercicio 24 -->
 // 24. Formulario de Registro: Crea un formulario de registro con campos de texto para nombre, email y contraseña. Al enviar el formulario, muestra un mensaje de bienvenida que incluya el nombre ingresado.
 
+// const cuerpo = document.body;
+// const formulario = document.createElement('form');
+// formulario.style.backgroundColor = 'green';
+// formulario.style.padding = '2rem';
+// formulario.style.textAlign = 'center';
+// cuerpo.appendChild(formulario);
+
+// const divContenedor = document.createElement('div')
+// divContenedor.id = ('divContenedor');
+// formulario.appendChild(divContenedor);
+
+// const inputNombre =  document.createElement('input');
+// inputNombre.id= ('nombre');
+// inputNombre.type = ('text');
+// inputNombre.style.margin = '0.3rem';
+// divContenedor.appendChild(inputNombre);
+
+// const inputMail =  document.createElement('input');
+// inputMail.id = ('email');
+// inputMail.type = ('text');
+// inputMail.style.margin = '0.3rem';
+// divContenedor.appendChild(inputMail);
+
+// const inputContra =  document.createElement('input');
+// inputContra.id = ('password');
+// inputContra.type = ('password');
+// inputContra.style.margin = '0.3rem';
+// divContenedor.appendChild(inputContra);
+
+// const boton = document.createElement('button');
+// boton.textContent = ('Enviar formulario');
+// formulario.appendChild(boton);
+
+// formulario.addEventListener("submit", function (event) {
+//       event.preventDefault();
+//       const nombre = document.querySelector("#nombre").value;
+//       const email = document.querySelector("#email").value;
+//       const password = document.querySelector("#password").value;
+//       const mensaje = document.createElement("p");
+//       mensaje.textContent = `Hola ${nombre}! Como estas?`;
+//       document.body.appendChild(mensaje);
+//     });
+//-------------------------------------------------------------------------------------
+// En html <!-- Ejercicio 25 -->
+// 25. Calculadora Simple: Crea una calculadora simple con botones para los números y operaciones básicas (+, -, *, /). Muestra el resultado en un campo de texto al presionar el botón de igual (=).
+
 const cuerpo = document.body;
-const formulario = document.createElement('form');
-cuerpo.appendChild(formulario);
+
+const divContenedor = document.createElement('div');
+divContenedor.id = ('IdDivContenedor');
+cuerpo.appendChild(divContenedor);
+
+const nDelUnoAlNueve = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
-const nombreEncabezados = ['Nombre', 'Mail', 'Contraseña'];
-nombreEncabezados.forEach((nombre) => {
-    const encabezado = document.createElement('h3');
-    const inputt = document.createElement('input');
-    encabezado.textContent = nombre;
-    formulario.appendChild(encabezado);
-    formulario.appendChild(inputt);
-});
+nDelUnoAlNueve.forEach((i)=> {
+    const botonNuevo = document.createElement('button');
+    botonNuevo.className ="botonNuevoClas"
+    botonNuevo.textContent = i;
+    divContenedor.appendChild(botonNuevo);
+})
 
-const boton = document.createElement ('button');
-boton.textContent = ('enviar');
-formulario.appendChild(boton);
+const operaciones = ['+','-','/','*'];
+operaciones.forEach((i)=> {
+    const botonesOperacion = document.createElement('button');
+    botonesOperacion.className ="botonesOperaClas"
+    botonesOperacion.textContent = i;
+    divContenedor.appendChild(botonesOperacion);
+})
+
+
+
+
+//////// mi forma
+// let botonera = nDelUnoAlNueve.forEach((i) => {
+//     const botonNuevo = document.createElement('button');
+//         textContent(i);
+//         divContenedor.appendChild(botonNuevo);
+// });
+// divContenedor.appendChild(botonera);
+
+
+
 
 
 
