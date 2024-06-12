@@ -274,12 +274,14 @@ console.log(JSON.parse(localStorage.getItem('productos')));
 ```
 
 ## Como armar un carrito de compras paso a paso.
-
+*para buscar el paso correpondiente en el archivo **.js** buscar con ctrl+f **//n.***
+1.
 - En el HTML agregamos dos *divs*.
 ```html
 <div id="product-list"></div>  <!-- los productos se van a mostrar aca -->
 <div id="cart"></div> <!-- el carrito se va a mostrar aca e ir agregando los productos -->
 ```
+2.
 - Lo primero que hacemos es crear la lista de productos, va a ser un *array* que va a guardar *objetos*.
 - Es muy importante cuando se trabaja con carrito de compras, generar un **ID para cada objeto**. Es la *primary key*
 ```js
@@ -292,22 +294,26 @@ const products = [
     {id: 6, nombre:"Café", precio: 6000,},
 ];
 ```
+3.
 - Ahora tenemos que definir un carrito.
-- Por lo general se define como un array vacío. Pero en este caso le vamos a asignar un método para que guarde toda la información en el **localStorage** y que el carrito la recupere desde ahí.
+- Por lo general se define como un **array vacío**. Pero en este caso le vamos a asignar un método para que guarde toda la información en el **localStorage** y que el carrito la recupere desde ahí.
 - Osea que todo lo que le vamos a asignar al carrito va a venir directamente desde el **localStorage**.
 ```js
 let cart = loadCartFromLocalStorage();
 ```
+4.
 - Creamos una función **addToCart**, esta función va a pedir como parámetros un *id* y una *cantidad*
 ```js
 function addToCart(prodcutoId, cantidad){};
 ```
+4.1
 - Vamos a definir un *product* que este prodcuto va a venir desde *products* y usamos el metodo *.find* para decirle que recupere el **ID** de cada producto siempre y cuando ese **ID** sea exactamente igual al **ID** que paso por parámetro.
 ```js
 function addToCart(prodcutoId, cantidad){
     const prodcut = products.find(p => p.id === prodcutoId);
 };
 ```
+4.2
 - Vamos a hacer una salvedad, si no existe el producto (**!prodcut**), le decimos que haga un console.error("El producto no fue encontrado"). Le agregamos el return para que salga de la función.
 ```js
 function addToCart(prodcutoId, cantidad){
@@ -318,7 +324,8 @@ function addToCart(prodcutoId, cantidad){
     }
 };
 ```
-- Ahora vamos a que el prodcuto exista.
+4.3
+- Ahora vamos a ver que el prodcuto exista.
 - Entonces creamos una *const cartItem* que busque en el cart con el meétodo *.find* el item cuyo *ID* sea exactamente igual al *ID* que le paso.
 ```js
 function addToCart(prodcutId, cantidad){
@@ -331,6 +338,7 @@ function addToCart(prodcutId, cantidad){
     
 };
 ```
+4.4
 - Hago una validación, si existe el *cartItem* en el carrito, va a actualziarle la cantidad.
 - Esto evita que si el item ya fue agregador antes al carrito, que no lo agregue como un item nuevo, sino que le sume las cantidades.
 - A ese *cartItem* agarro la cantidad y le digo que incremente (**+=**) la cantidad que paso por parámetro.
@@ -347,6 +355,7 @@ function addToCart(prodcutId, cantidad){
     }
 };
 ```
+4.5
 - Hacemos lo mismo para el subtotal, *todavía no esta definido, se define en el paso siguiente*
 - Multiplicamos la cantidad por el precio, esto me va a dar el subtotal de ese prodcutos.
 ```js
@@ -363,8 +372,9 @@ function addToCart(prodcutId, cantidad){
     }
 };
 ```
+4.6
 - Si no existe el producto en el carrito, lo tengo que agregar. Lo hacemos usando el **else**.
-- Usamos el método **cart.push**.
+- Usamos el método **cart.push**. //4.6.1
 - Creamos un *objeto*.
 - De ese objeto, lo que quiero enviar es, *id* que lo va a sacar de *prodcut.id*. Un *nombre* que lo saca de *prodcut.nombre*. Un *precio* que lo saca de *product.precio*. Despues una *cantidad*, esta la va a sacar de la *cantidad* que reciba por parámetro. Ahora definimos el *subtotal*. Esto va a ser la *cantidad* por el precio (*product.precio*).
 - **TODO ESTO VA A SER EL OBJETO QUE VOY A GUARDAR EN EL CARRITO.**
@@ -391,7 +401,9 @@ function addToCart(productId, cantidad){
     }
 };
 ```
+4.7
 - Ahora agregamos el método para guardarlo dentro del **localStorage**. *Todavía no esta definida*
+4.8
 - Hacer "render" del carrito. **renderCart()** para que se vea en el **DOM**. *Todavía no esta definida*
 ```js
 function addToCart(productId, cantidad){
@@ -418,6 +430,15 @@ function addToCart(productId, cantidad){
     renderCart();
 };
 ```
+5.
+- Creamos la función *calculateTotal()*. Esta función nos va a mostra el total de todos y todas las cantidades de prodcutos agregador al carrito.
+```js
+function calculateTotal() {
+    return cart.reduce((total, item) => total + item.subTotal, 0);
+}
+```
+
+
 - Hacemos la función **renderProducts()**.
 - Vamos a sacar de una lista de prodcuts y vamos a usar getElementById del *div* que habíamos creado en el *HTML* con **id="product-list"**.
 - Esto va a mostrar toda la lista de **productos** que tenemos cargados.
@@ -480,7 +501,7 @@ function renderCart () {
     cart.forEach(item => {
         const cartItemDiv = document.createElement('div');
         cartItemDiv.innerHTML = `
-        <p>ID: ${item.id}, Nombre: ${item.nombre}, Cantidad: ${item.cantidad}, Precio total ${item.totalPrice}</p>
+        <p>ID: ${item.id}, Nombre: ${item.nombre}, Cantidad: ${item.cantidad}, Precio total ${item.subTotal}</p>
         `;
         cartDiv.appendChild(cartItemDiv);
     }

@@ -99,8 +99,9 @@
 /////////////////////////////////////////////////
 
 // Armar un carrito de compras
+// Los numeros despues de los // correpondel al punto en el archivo ReadMe
 
-const products = [
+const products = [  //2.
     { id: 1, nombre: "Azucar", precio: 1080, },
     { id: 2, nombre: "Yerba", precio: 1700, },
     { id: 3, nombre: "Dulce de Leche", precio: 500, },
@@ -109,20 +110,21 @@ const products = [
     { id: 6, nombre: "Café", precio: 6000, },
 ];
 
-let cart = loadCartFromLocalStorage();
 
-function addToCart(productId, cantidad) {
-    const product = products.find(p => p.id === productId);
-    if (!product) {
+let cart = loadCartFromLocalStorage();  //3.
+
+function addToCart(productId, cantidad) { //4.
+    const product = products.find(p => p.id === productId);  //4.1.
+    if (!product) { //4.2.
         console.error("El producto no fue encontrado");
         return;
     }
-    const cartItem = cart.find(item => item.id === productId);
-    if (cartItem) {
+    const cartItem = cart.find(item => item.id === productId); //4.3.
+    if (cartItem) { //4.4.
         cartItem.cantidad += cantidad;
-        cartItem.subTotal = cartItem.cantidad * product.precio;
-    } else {
-        cart.push({
+        cartItem.subTotal = cartItem.cantidad * product.precio; //4.5.
+    } else { //4.6.
+        cart.push({ //4.6.1
             id: product.id,
             nombre: product.nombre,
             precio: product.precio,
@@ -130,9 +132,16 @@ function addToCart(productId, cantidad) {
             subTotal: cantidad * product.precio,
         })
     }
-    saveCartToLocalStorage();
-    renderCart();
+    saveCartToLocalStorage(); //4.7.
+    renderCart(); //4.8.
 };
+
+////////////////////////////////////////////////////
+function calculateTotal() { //5.
+    return cart.reduce((total, item) => total + item.subTotal, 0);
+}
+
+////////////////////////////////////////////////////
 
 function renderProducts() {
     const productList = document.getElementById('product-list');
@@ -153,11 +162,14 @@ function renderCart() {
     cart.forEach(item => {
         const cartItemDiv = document.createElement('div');
         cartItemDiv.innerHTML = `
-        <p>ID: ${item.id}, Nombre: ${item.nombre}, Cantidad: ${item.cantidad}, Precio total ${item.totalprecio}</p>
+        <p>ID: ${item.id}, Nombre: ${item.nombre}, Cantidad: ${item.cantidad}, Precio total $${item.subTotal}</p>
         `;
         cartDiv.appendChild(cartItemDiv);
-    }
-    )
+    });
+    
+    const totalDiv = document.createElement('div');
+    totalDiv.innerHTML = `<p>Total: $${calculateTotal()}</p>`;
+    cartDiv.appendChild(totalDiv);
 }
 
 function saveCartToLocalStorage() {
@@ -170,4 +182,5 @@ function loadCartFromLocalStorage() {
 document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
     renderCart();
-})
+});
+
