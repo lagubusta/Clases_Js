@@ -100,7 +100,6 @@
 
 // Armar un carrito de compras
 // Los numeros despues de los // correpondel al punto en el archivo ReadMe
-
 const products = [  //2.
     { id: 1, nombre: "Azucar", precio: 1080, },
     { id: 2, nombre: "Yerba", precio: 1700, },
@@ -109,10 +108,7 @@ const products = [  //2.
     { id: 5, nombre: "Manetca", precio: 150, },
     { id: 6, nombre: "Café", precio: 6000, },
 ];
-
-
 let cart = loadCartFromLocalStorage();  //3.
-
 function addToCart(productId, cantidad) { //4.
     const product = products.find(p => p.id === productId);  //4.1.
     if (!product) { //4.2.
@@ -135,52 +131,44 @@ function addToCart(productId, cantidad) { //4.
     saveCartToLocalStorage(); //4.7.
     renderCart(); //4.8.
 };
-
-////////////////////////////////////////////////////
 function calculateTotal() { //5.
     return cart.reduce((total, item) => total + item.subTotal, 0);
 }
-
-////////////////////////////////////////////////////
-
-function renderProducts() {
-    const productList = document.getElementById('product-list');
-    productList.innerHTML = '';
-    products.forEach(product => {
-        const productDiv = document.createElement('div');
+function renderProducts() { //6.
+    const productList = document.getElementById('product-list'); //6.1
+    productList.innerHTML = ''; //6.2
+    products.forEach(product => { //6.3
+        const productDiv = document.createElement('div'); //6.4
         productDiv.innerHTML = `
         <p>${product.nombre} - $${product.precio}</p>
         <button onclick="addToCart(${product.id}, 1)">Agregar al carrito</button>
         `;
-        productList.appendChild(productDiv);
+        productList.appendChild(productDiv); //6.5
     });
 }
-
-function renderCart() {
-    const cartDiv = document.getElementById('cart');
-    cartDiv.innerHTML = '';
-    cart.forEach(item => {
+function renderCart() { //7.
+    const cartDiv = document.getElementById('cart'); //7.1
+    cartDiv.innerHTML = ''; //7.2
+    cart.forEach(item => { //7.3
         const cartItemDiv = document.createElement('div');
         cartItemDiv.innerHTML = `
         <p>ID: ${item.id}, Nombre: ${item.nombre}, Cantidad: ${item.cantidad}, Precio total $${item.subTotal}</p>
         `;
-        cartDiv.appendChild(cartItemDiv);
+        cartDiv.appendChild(cartItemDiv); //7.4
     });
-    
-    const totalDiv = document.createElement('div');
-    totalDiv.innerHTML = `<p>Total: $${calculateTotal()}</p>`;
-    cartDiv.appendChild(totalDiv);
+    const totalDiv = document.createElement('div'); //8.
+    totalDiv.innerHTML = `<p>Total: $${calculateTotal()}</p>`; //8.1
+    cartDiv.appendChild(totalDiv); //8.2
 }
-
-function saveCartToLocalStorage() {
-    localStorage.setItem('cart', JSON.stringify(cart));
+function saveCartToLocalStorage() {   //9.
+    localStorage.setItem('cart', JSON.stringify(cart)); //9.1
 }
-function loadCartFromLocalStorage() {
+function loadCartFromLocalStorage() {   // 9.2
     const cartData = localStorage.getItem('cart');
     return cartData ? JSON.parse(cartData) : [];
 }
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {    //10.
     renderProducts();
-    renderCart();
+    renderCarrenderCart();
 });
 
