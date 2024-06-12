@@ -62,5 +62,5 @@ const usuario1 = {
     edad: 30,
 }
 const usuario2 = null;
-console.log(usuario1 || "el usuario no existe")
-console.log(usuario2 || "el usuario no existe")
+console.log(usuario1 || "el usuario no existe");
+console.log(usuario2 || "el usuario no existe");
