@@ -81,6 +81,60 @@
 // console.log(usuario2?.nombre || "El usuario no existe");
 /////////////////////////////////////////////
 
+// const usuario1 = {
+//     nombre: "Agustin",
+//     edad: 30,
+//     cursos: {
+//         desarrolloWeb: "Aprobado",
+//         javascript: "En curso",
+//     }
+// }
+// const usuario2 =  {
+//     nombre: "Sofia",
+//     edad: 24,
+//     cursos: {
+//         desarrolloWeb: "No",
+//         javascript: "No",
+//     }
+// }null;
+
+// console.log(usuario1?.cursos?.desarrolloWeb || "El usuario no existe");
+// console.log(usuario2?.cursos?.desarrolloWeb || "El usuario no existe");
+/////////////////////////////////////////////
+
+// Desestructuración
+
+// const usuario1 = {
+//     nombre: "Agustin",
+//     edad: 30,
+//     cursos: {
+//         desarrolloWeb: "Aprobado",
+//         javascript: "En curso",
+//     }
+// }
+// let {nombre, edad, cursos: { desarrolloWeb, javascript}} = usuario1; 
+// console.log(desarrolloWeb);
+// console.log(javascript);
+
+// console.log(usuario1);
+// let {nombre: nombre_usuario, edad: edad_usuario, cursos: { desarrolloWeb, javascript}} = usuario1; 
+
+// console.log(nombre);
+// console.log(desarrolloWeb);
+// console.log(javascript);
+
+// const producto1 = {
+//     nombre: "Azucar",
+//     precios: 1080,
+// };
+// const {nombre: nombre_producto, precio: precio_producto} = producto1;
+
+// console.log(nombre_producto);
+// console.log(nombre_usuario);
+/////////////////////////////////////////////
+
+// #### Desestructuración en parámetros.
+
 const usuario1 = {
     nombre: "Agustin",
     edad: 30,
@@ -89,14 +143,9 @@ const usuario1 = {
         javascript: "En curso",
     }
 }
-const usuario2 =  {
-    nombre: "Sofia",
-    edad: 24,
-    cursos: {
-        desarrolloWeb: "No",
-        javascript: "No",
-    }
-}null;
 
-console.log(usuario1?.cursos?.desarrolloWeb || "El usuario no existe");
-console.log(usuario2?.cursos?.desarrolloWeb || "El usuario no existe");
+const desestructurarObjetos = (objeto) => {
+    const {nombre, edad} = objeto;
+    console.log(nombre, edad);
+}
+desestructurarObjetos(usuario1);

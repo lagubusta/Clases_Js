@@ -164,3 +164,106 @@ console.log(usuario2?.cursos?.desarrolloWeb || "La propiedad no existe");
 console.log(usuario1?.cursos?.react || "La propiedad no existe");
 // La propiedad no existe
 ```
+
+## Desestructuración
+- Seguimos con el ejemplo de *usuario1*.
+```js
+const usuario1 = {
+    nombre: "Agustin",
+    edad: 30,
+    cursos: {
+        desarrolloWeb: "Aprobado",
+        javascript: "En curso",
+    }
+}
+```
+- Yo necesito acceder a información que esta muy estructurada y tengo que hacerlo de una manera más sencilla.
+- Podemos declarar una variable que corresponde a un objeto y dentro de ese objeto declarar todos los atributos.
+```js
+let {nombre, edad, cursos} = usuario1; 
+console.log(nombre);
+// Agustin
+console.log(cursos);
+// {desarrolloWeb: 'Aprobado', javascript: 'En curso'}
+```
+- Como se muestra en el ejemplo, *cursos es un objeto* que se imprime como tal, pero si yo quiero acceder a cursos lo hago así:
+
+```js
+let {nombre, edad, cursos: { desarrolloWeb, javascript}} = usuario1; 
+console.log(desarrolloWeb);
+// Aprobado
+console.log(javascript);
+// En curso
+```
+#### Alias
+
+- Otra forma es usando un *alias*.
+- Cuando tenemos objetos distintos y los queremos desetructurar, siempre tratamos de usar un **alias**, para evitar que se "repitan" atributos.
+- Por ejemplo:
+
+```js
+const producto1 = {
+    nombre: "Azucar",
+    precios: 1080,
+};
+const {nombre, precio} = producto1;
+```
+- Hice un objeto nuevo que es producto1, y cuando lo quiero desestructurar se repeditre el "nombre". Lo tengo repedito en
+```js
+let {nombre, ...} = usuario1
+const {nombre, ...} = producto1;
+```
+Siempre va a dar error. Entonces para eso usamos un alias.
+- Quedarían dos objetos, el de producto1 y el de usuario1.
+
+```js
+const usuario1 = {
+    nombre: "Agustin",
+    edad: 30,
+    cursos: {
+        desarrolloWeb: "Aprobado",
+        javascript: "En curso",
+    }
+}
+const producto1 = {
+    nombre: "Azucar",
+    precios: 1080,
+};
+// Declaramos variables con alias.
+let {nombre: nombre_usuario, edad: edad_usuario, cursos: { desarrolloWeb, javascript}} = usuario1; 
+const producto1 = {
+    nombre: "Azucar",
+    precios: 1080,
+};
+
+console.log(nombre_producto);
+// Azucar
+console.log(nombre_usuario);
+// Agustín
+```
+
+#### Desestructuración en parámetros.
+
+- Creamos un metodo que sea para *desestructurar objetos*.
+```js
+const desestructurarObjetos = 
+```
+- Va recibir por parámetro por ejemplo *objeto*.
+```js
+const desestructurarObjetos = (objeto) => {}
+```
+- Si quiero desestructurar a **usuario1**
+- Creo una variable dentro de la función que busque el *nombre* y la *edad* de **objeto** y le pido que haga un console.log de ellos.
+```js
+const desestructurarObjetos = (objeto) => {
+    const {nombre, edad} = objeto;
+}
+
+```
+
+```js
+```
+```js
+```
+```js
+```
