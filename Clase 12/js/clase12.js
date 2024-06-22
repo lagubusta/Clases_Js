@@ -143,9 +143,42 @@ const usuario1 = {
         javascript: "En curso",
     }
 }
-
-const desestructurarObjetos = (objeto) => {
-    const {nombre, edad} = objeto;
-    console.log(nombre, edad);
+const usuario2 = {
+    nombre: "Mateo",
+    edad: 31,
+    cursos: {
+        desarrolloWeb: "Pendiente",
+        javascript: "Aprobado",
+        react: "Pendiente"
+    }
 }
-desestructurarObjetos(usuario1);
+
+
+// const desestructurarObjetos = (objeto) => {
+//     const {nombre, edad} = objeto;
+//     console.log(nombre, edad);
+// }
+// desestructurarObjetos(usuario2);
+
+// const desestructurarAtributos = ({nombre, edad}) => {console.log(nombre, edad)};
+
+
+// desestructurarAtributos(usuario1);
+
+/////////////////////////////////////////////
+
+//#### Desestructuración de Arrays.
+
+const nombresDePersonas = ["Agustín", "Mateo", "Ines", "Ignacio", "Carolina"];
+// console.log(nombresDePersonas); 
+
+// const [a, b, c, d, e] = nombresDePersonas;
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+// console.log(e);
+
+
+const [,,,a, b] = nombresDePersonas;
+console.log(a);

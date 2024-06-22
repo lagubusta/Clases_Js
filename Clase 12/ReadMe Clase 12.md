@@ -258,12 +258,69 @@ const desestructurarObjetos = (objeto) => {}
 const desestructurarObjetos = (objeto) => {
     const {nombre, edad} = objeto;
 }
-
+```
+- Llamamos al metodo *desestructurarObjetos* y le pasamos como parámtro a usuario1
+```js
+desestructurarObjetos(usuario1);
+// Agustin 30
+```
+- ¿Que pasa si tengo varios usuarios?
+```js
+desestructurarObjetos(usuario2);
+const usuario2 = {
+    nombre: "Mateo",
+    edad: 31,
+    cursos: {
+        desarrolloWeb: "Pendiente",
+        javascript: "Aprobado",
+        react: "Pendiente"
+    }
+}
+desestructurarObjetos(usuario2);
+// Mateo 31
+```
+- Este estilo de desestructuración es cuando recibe un objeto por parámetro.
+---
+Ahora vamos a hacer que directamente reciba la información que quiero desestructurar.
+```js
+const desestructurarAtributos = ({nombre, edad}) => {console.log(nombre, edad)};
+desestructurarAtributos(usuario1);
+// Agustin 30
 ```
 
+----
+#### Desestructuración de Arrays.
+
+- Tengo este array de **nombresDePersonas**
 ```js
+const nombresDePersonas = ["Agustín", "Mateo", "Ines", "Ignacio", "Carolina"];
+console.log(nombresDePersonas); 
+//(5) ['Agustín', 'Mateo', 'Ines', 'Ignacio', 'Carolina']
+console.log(nombresDePersonas[0]);
+console.log(nombresDePersonas[1]);
+console.log(nombresDePersonas[2]);
+// Agustin
+// Mateo
+// Ines
 ```
+- Esto podría desestructurarlo de la siguiente manera:
 ```js
+const nombresDePersonas = ["Agustín", "Mateo", "Ines", "Ignacio", "Carolina"];
+const [a, b, c, d, e] = nombresDePersonas;
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+// Agustin
+// Mateo
+// Ines
+// Ignacio
+// Carolina
 ```
+- No necesariamente tengo que llamar a todos los objetos dentro del array, también puedo llamar solo al 3 por ejemplo. Se hace así:
 ```js
+const [,,a, b] = nombresDePersonas;
+console.log(a);
+// Ines
 ```
