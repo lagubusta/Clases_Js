@@ -56,11 +56,47 @@
 // console.log( false || "Falsy")  // Falsy
 
 
+// ## Operador Logico ?? o Nullish
+// const usuario1 = {
+//     nombre: "Agustin",
+//     edad: 30,
+// }
+// const usuario2 = null;
+// console.log(usuario1 || "el usuario no existe");
+// console.log(usuario2 || "el usuario no existe");
+
+// const carrito = localStorage.getItem('cart') || console.log("El carrito esta vacio");
+// console.log(carrito);
+
+
+// ## Acceso condicional a un objeto
+/////////////////////////////////////////////
+// const usuario1 = {
+//     nombre: "Agustin",
+//     edad: 30,
+// }
+// const usuario2 = null;
+
+// console.log(usuario1?.nombre || "El usuario no existe");
+// console.log(usuario2?.nombre || "El usuario no existe");
+/////////////////////////////////////////////
 
 const usuario1 = {
     nombre: "Agustin",
     edad: 30,
+    cursos: {
+        desarrolloWeb: "Aprobado",
+        javascript: "En curso",
+    }
 }
-const usuario2 = null;
-console.log(usuario1 || "el usuario no existe");
-console.log(usuario2 || "el usuario no existe");
+const usuario2 =  {
+    nombre: "Sofia",
+    edad: 24,
+    cursos: {
+        desarrolloWeb: "No",
+        javascript: "No",
+    }
+}null;
+
+console.log(usuario1?.cursos?.desarrolloWeb || "El usuario no existe");
+console.log(usuario2?.cursos?.desarrolloWeb || "El usuario no existe");

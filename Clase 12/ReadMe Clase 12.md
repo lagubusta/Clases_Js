@@ -45,7 +45,7 @@ permiso ?  console.log("Puede consumir alcohol") : console.log("No puede consumi
 ## Operador Lógico and (**&&**)
 
 - Es una reducción de un condicional, pero trata de ejecutar (o retornar) algo sólo si la condición es verdadera, reduce un if sencillo con un solo bloque de ejecución.
-- Ante haciamos así
+- Antes haciamos así:
 ```js
 const carrito = [];
 if(carrito.length === 0 ){
@@ -62,10 +62,12 @@ carrito.length === 0 && console.log("Carrito vacio");
 - Si lo que se pone delante del && se cumple, va a ejecutar lo que esta despues del &&.
 ---
 
-## Operador Lógico or (**||**)
+## Operador Lógico OR (**||**)
 
 ////// CODER
 - OR ( || ) es sintácticamente similar al anterior, con la diferencia que consta de dos operandos y no de una condición explícita: operando1 || operando2.
+- Si se que tengo varías posibilidades de respuesta me combien usar **||** en vez de **??**. 
+
 ```js
 console.log( 0 || "Falsy")  // Falsy
 console.log( 40 || "Falsy")  // 40
@@ -96,3 +98,69 @@ console.log(usuario2 || "el usuario no existe")
 ## Operador Logico ?? o Nullish
 
 - Si se que las posibilidades de respuesta son null o undefiuned me conviene usar ?? sino ||.
+- Este Operador (??) funciona igual que el Operador OR ( || ), con la diferencia que admite más valores como ‘verdaderos’. En este caso, sólo obtenemos nullish en dos casos:
+```js
+console.log( 0 ?? "Nullish")  // 0
+console.log( 40 ?? "Nullish")  // 40
+console.log( null ?? "Nullish")  // Nullish
+console.log( undefined ?? "Nullish")  // Nullish
+console.log( "Hola Mundo" ?? "Nullish")  // Hola Mundo
+console.log( "" ?? "Nullish")  // ""
+console.log( NaN ?? "Nullish")  // NaN
+console.log( true ?? "Nullish")  // true
+console.log( false ?? "Nullish")  // false
+```
+- De esta forma puedo verificar si el carrtio tiene productos agregados o si esta vacio.
+```js
+const carrito = localStorage.getItem('cart') || console.log("El carrito esta vacio");
+console.log(carrito);
+```
+
+## Acceso condicional a un objeto
+- Si solamente tengo crear el *usuario1* yo puedo acceder a cualquier cosa de ese usuario.
+```js
+const usuario1 = {
+    nombre: "Agustin",
+    edad: 30,
+}
+```
+```js
+console.log(usuario1.nombre);
+// Agustin
+```
+- Pero si quiero hacer lo mismo con **usuario2** va a decir error por que no existe.
+```js
+console.log(usuario2.nombre || "El usuario no existe");
+// IMPRMIE ERROR EN CONSOLA
+```
+- Para eso usamos el **acceso condicional**.
+```js
+console.log(usuario1?.nombre || "El usuario no existe");
+// Agustín
+console.log(usuario2?.nombre || "El usuario no existe");
+// El usuario no existe
+```
+- Basicamente lo que hace es preguntar si el usuario 1 o 2 existe y en caso que exista muestre el nombre, sino existe que muestre **El usuario no existe**.
+----
+- Tengo el objeto *usuario1* que tiene un objeto dentro *cursos* con dos propiedades: *desarrollo web y javascript*.
+```js
+const usuario1 = {
+    nombre: "Agustin",
+    edad: 30,
+    cursos: {
+        desarrolloWeb: "Aprobado",
+        javascript: "En curso",
+    }
+}
+const usuario2 = null;
+```
+- Así accedo a los cursos de usuario1:
+- Si el *usuario1* existe y tiene el curso de *desarrolloWeb* va a mostrar
+```js
+console.log(usuario1?.cursos?.desarrolloWeb || "La propiedad no existe");
+// Aprobado
+console.log(usuario2?.cursos?.desarrolloWeb || "La propiedad no existe");
+// La propiedad no existe
+console.log(usuario1?.cursos?.react || "La propiedad no existe");
+// La propiedad no existe
+```
