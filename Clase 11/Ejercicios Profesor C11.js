@@ -131,8 +131,60 @@ const cuerpo = document.body;
 //-------------------------------------------------------------------------------------
 // Ejercicio 9: Crea una tabla en HTML y añade filas dinámicamente con JavaScript.
 
+// // Crear el botón para agregar filas
+// const boton = document.createElement('button');
+// boton.textContent = 'Agregar Fila';
+// cuerpo.appendChild(boton);
 
+// // Crear un div contenedor para la tabla
+// const divTabla = document.createElement('div');
+// divTabla.id = 'IdDivTabla';
+// cuerpo.appendChild(divTabla);
 
+// // Crear la tabla y añadirla al div
+// const tabla = document.createElement('table');
+// tabla.style.border ='1px solid black';
+// tabla.style.borderCollapse = 'collapse';
+// divTabla.appendChild(tabla);
+
+// // Crear un div contenedor para la tabla
+// const encabezadoTabla = document.createElement('thead');
+// tabla.appendChild(encabezadoTabla);
+
+// const filaEncabezado = document.createElement('tr');
+// encabezadoTabla.appendChild(filaEncabezado);
+
+// const columnaEncabezado1 = document.createElement('th');
+// columnaEncabezado1.textContent = 'Columna 1';
+// columnaEncabezado1.style.border = '1px solid black';
+// filaEncabezado.appendChild(columnaEncabezado1);
+
+// const columnaEncabezado2 = document.createElement('th');
+// columnaEncabezado2.textContent = 'Columna 2';
+// columnaEncabezado2.style.border = '1px solid black';
+// filaEncabezado.appendChild(columnaEncabezado2);
+
+// // Crear el cuerpo de la tabla
+// const cuerpoTabla = document.createElement ('tbody');
+// tabla.appendChild(cuerpoTabla);
+
+// // Función para agregar una fila a la tabla
+// boton.addEventListener('click', agregarFila);
+// function agregarFila() {
+//     const nuevaFila = document.createElement('tr');
+
+//     const nuevaCelda1 = document.createElement('td');
+//     nuevaCelda1.textContent = `Celda 1`;
+//     nuevaCelda1.style.border = '1px solida black';
+//     nuevaFila.appendChild(nuevaCelda1);
+
+//     const nuevaCelda2 = document.createElement('td');
+//     nuevaCelda2.textContent = `Celda 2`;
+//     nuevaCelda2.style.border = '1px solid black';
+//     nuevaFila.appendChild(nuevaCelda2);
+
+//     cuerpoTabla.appendChild(nuevaFila);
+// }
 
 //-------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------
