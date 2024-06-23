@@ -271,8 +271,28 @@ const producto = {
 const productoJSON = JSON.stringify(producto);
 localStorage.setItem('Producto1', productoJSON);
 
+const productoRecuperdadoJSON = localStorage.getItem('Producto1');
+const productoRecuperdado = JSON.parse(productoRecuperdadoJSON);
 
+const div = document.createElement('div');
+div.id= 'productoInfo';
+cuerpo.appendChild(div);
 
+const nombre = document.createElement('p');
+nombre.textContent = `Nombre: ${productoRecuperdado.nombre}`;
+div.appendChild(nombre);
+
+const apellido = document.createElement('p');
+apellido.textContent = `Apellido: ${productoRecuperdado.apellido}`;
+div.appendChild(apellido);
+
+const edad = document.createElement('p');
+edad.textContent = `Edad: ${productoRecuperdado.edad}`;
+div.appendChild(edad);
+
+const cursos = document.createElement('p');
+cursos.textContent = `Cursos: ${productoRecuperdado.cursos}`;
+div.appendChild(cursos);
 
 
 //-------------------------------------------------------------------------------------
