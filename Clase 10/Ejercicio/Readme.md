@@ -15,7 +15,7 @@ Partiendo de la siguiente estructura HTML:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Javascript | Comisión #57705</title>
 </head>
 
@@ -34,7 +34,7 @@ Partiendo de la siguiente estructura HTML:
     <footer></footer>
     <!-- Aca pongo los Script de JS -->
     <script src="js/navegacion.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/inicio.js"></script>
     <!-- Scripts de JS  -->
 </body>
 
