@@ -120,13 +120,9 @@ for(let i = 0; i < localStorage.length ; i++){
 - Cuando sea necesario enviar un objeto Javascript al servidor o almacenarlo en storage, será necesario convertirlo a un **JSON** (una cadena) antes de ser enviado.
 - Para eso usamos los siguientes métodos:
     - **stringify**:
-    -Aepta un objeto como parámetro, y devuelve la forma de texto JSON equivalente.
+    -Acepta un objeto como parámetro, y devuelve la forma de texto JSON equivalente.
     - **parse**:
     - Recibe un texto JSON como parámetro, y devuelve el objeto JavaScript correspondiente.
-
-
-
-
 
 ###### Ejemplo **stringify**:
 - Creamos un objeto (*productos*)

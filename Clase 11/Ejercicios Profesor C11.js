@@ -187,6 +187,98 @@ const cuerpo = document.body;
 // }
 
 //-------------------------------------------------------------------------------------
+// Ejercicio 10: Crea una lista desplegable (select) y muestra el valor seleccionado en un párrafo.
+
+// const divContenedor = document.createElement('div');
+// cuerpo.appendChild(divContenedor);
+
+// const listaDesplegable = document.createElement('select');
+// divContenedor.appendChild(listaDesplegable);
+
+// const opciones = ['opcion 1', 'opcion2','opcion3','opcion4'];
+// opciones.forEach(opcion => {
+//     const elementoOpcion = document.createElement('option');
+//     elementoOpcion.value = opcion;
+//     elementoOpcion.textContent = opcion;
+//     listaDesplegable.appendChild(elementoOpcion);
+// });
+
+// const parrafoSeleccionado = document.createElement('p');
+// parrafoSeleccionado.textContent='Seleccionar Opcion';
+// divContenedor.appendChild(parrafoSeleccionado);
+
+// listaDesplegable.addEventListener('change', mostrarSeleccion);
+
+// function mostrarSeleccion(){
+//     const valorSeleccionado = listaDesplegable.value;
+//     parrafoSeleccionado.textContent = `Seleccionaste ${valorSeleccionado}`
+// }
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+// Ejercicios sobre Storage (Local y Sesión)
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+// Ejercicio 11: Guarda un valor en el Local Storage cuando se haga clic en un botón.
+// const boton = document.createElement('button');
+// boton.textContent = 'Agregar a LocalStorage';
+// cuerpo.appendChild(boton);
+
+// const guardar = document.createElement('h4');
+// guardar.textContent = 'Item guardado2';
+// cuerpo.appendChild(guardar);
+
+// boton.addEventListener ('click', cargar);
+// function cargar () {
+//     localStorage.setItem ('Guardar', guardar.innerText);
+// }
+//-------------------------------------------------------------------------------------
+// Ejercicio 12: Recupera un valor del Local Storage y muéstralo en un div.
+///////////////////// descomentar eje 11 para que funcione
+// const divRecuperado = document.createElement('div');
+// cuerpo.appendChild(divRecuperado);
+// const recuperado = document.createElement('h5');
+// cuerpo.appendChild(recuperado);
+// const valorR = localStorage.getItem('Guardar');
+// recuperado.textContent = `Este es recuperado ${valorR}`;
+//-------------------------------------------------------------------------------------
+// Ejercicio 13: Guarda un valor en el Session Storage cuando se haga clic en un botón.
+///////////////////// descomentar eje 11 y 12 para que funcione
+// const botonLocalS = document.createElement('button');
+// botonLocalS.textContent = 'Guardar en Local Sesion';
+// cuerpo.appendChild(botonLocalS);
+
+// botonLocalS.addEventListener ('click', lsesion);
+// function lsesion(){
+//     sessionStorage.setItem('EnLs', recuperado.innerText);
+// }
+//-------------------------------------------------------------------------------------
+// Ejercicio 14: Recupera un valor del Session Storage y muéstralo en un div.
+///////////////////// descomentar eje 11, 12 y 13 para que funcione
+// const divRecuperadoLS = document.createElement('div');
+// cuerpo.appendChild(divRecuperadoLS);
+// const recuperadoLS = document.createElement('h6');
+// cuerpo.appendChild(recuperadoLS);
+// const valorRLS = sessionStorage.getItem('EnLs');
+// recuperado.textContent = `Desde Sesion Storage ${valorRLS}`;
+//-------------------------------------------------------------------------------------
+// Ejercicio 15: Guarda un objeto en el Local Storage y recupéralo, mostrando sus propiedades en un div.
+const producto = {
+    nombre: 'Agustín',
+    apellido: 'Bustamante',
+    edad: 30,
+    cursos: 'Java Script',
+};
+const productoJSON = JSON.stringify(producto);
+localStorage.setItem('Producto1', productoJSON);
+
+
+
+
+
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------
