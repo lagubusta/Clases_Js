@@ -5,6 +5,8 @@
 //-------------------------------------------------------------------------------------
 // globales
 const cuerpo = document.body;
+cuerpo.style.backgroundColor = 'grey';
+
 // Ejercicios sobre el DOM
 //-------------------------------------------------------------------------------------
 //Ejercicio 1: Crea un botón en el HTML y, cuando se haga clic en él, muestra un mensaje en la consola.
@@ -456,29 +458,101 @@ const cuerpo = document.body;
 //-------------------------------------------------------------------------------------
 // Crea una aplicación de lista de tareas donde los usuarios puedan agregar, eliminar y marcar tareas como completadas. Las tareas deben almacenarse en el Local Storage y recuperarse al cargar la página.
 
-const contenedorInput = document.createElement('div');
-cuerpo.appendChild(contenedorInput);
+// const contenedorInput = document.createElement('div');
+// cuerpo.appendChild(contenedorInput);
 
-const inputTareas = document.createElement('input');
-inputTareas.type = 'text';
-contenedorInput.appendChild(inputTareas);
+// const inputTareas = document.createElement('input');
+// inputTareas.type = 'text';
+// contenedorInput.appendChild(inputTareas);
 
-const botonGuardar = document.createElement('button');
-botonGuardar.textContent = 'Guardar';
-contenedorInput.appendChild(botonGuardar);
+// const botonGuardar = document.createElement('button');
+// botonGuardar.textContent = 'Guardar';
+// contenedorInput.appendChild(botonGuardar);
 
-const listaTareas = document.createElement('ul');
-contenedorInput.appendChild(listaTareas);
+// const listaTareas = document.createElement('ul');
+// contenedorInput.appendChild(listaTareas);
 
-botonGuardar.addEventListener('click', guardar);
-function guardar () {
-    const nroTarea = document.createElement('li');
-    nroTarea.textContent = inputTareas.value;
-    contenedorInput.appendChild(nroTarea);
+// // Función para agregar una tarea a la lista
+// function agregarTarea(tareaTexto) {
+//     const tarea = document.createElement('li');
+//     const textoTarea = document.createElement('span');
+//     textoTarea.textContent = textoTarea;
+//     tarea.appendChild(textoTarea);
 
-    const botonEliminar = document.createElement('button');
-    botonEliminar.textContent = 'Eliminar Tarea';
-    botonEliminar.style.marginLeft = '10px';
-    nroTarea.appendChild(botonEliminar);
+//     const botonEliminar = document.createElement('button');
+//     botonEliminar.textContent = 'Eliminar';
+//     tarea.appendChild(botonEliminar);
+
+//     botonEliminar.addEventListener('click', () => {
+//         listaTareas.removeChild(tarea);
+//         guardarTareas();
+//     })
+
+//     textoTarea.addEventListener('click', () => {
+//         textoTarea.classList.toggle('completada');
+//         guardarTareas();
+//     });
+
+//     listaTareas.appendChild(tarea);
+// };
+
+// // Función para guarda las tareas en el Local Storage
+
+// function guardarTareas() {
+//     const tareas = [];
+//     listaTareas.querySelectorAll('li').forEach(tarea => {
+//         tareas.push({
+//             texto: tarea.querySelector('span').textContent,
+//             completada: tarea.querySelector('span').classList.contains('completada')
+//         });
+//     });
+//     localStorage.setItem('tareas', JSON.stringify(tareas));
+// }
+
+// // Función para cargar las tareas desde el Local Storage
+
+// function cargarTareas(){
+//     const tareas = JSON.parse(localStorage.getItem('tareas')) || [];
+//     tareas.forEach(tarea => {
+//         agregarTarea.apply(tarea.texto);
+//         if (tarea.completada){
+//             listaTareas.lastChild.querySelector('span').classList.add('completada');
+//         }
+//     });
+// }
+
+// // Evento para agregar una nueva tarea cuando se hace clic en el botón
+// botonGuardar.addEventListener('click',() =>{
+//     if(inputTareas.value.trim() !== '') {
+//         agregarTarea(inputTareas.value.trim());
+//         inputTareas.value = '';
+//         guardarTareas();
+//     }
+// });
+// // Cargar las tareas al cargar la página
+// cargarTareas();
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+// Ejercicios Integradores:
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+// Ejercicio 2: Registro de Estudiantes
+// Desarrolla una aplicación para registrar estudiantes con nombre, edad y curso. Los datos deben almacenarse en el Local Storage y mostrarse en una tabla. Debe permitir editar y eliminar estudiantes.
+
+const contenedor =document.createElement('div');
+contenedor.textContent = 'hola';
+cuerpo.appendChild(contenedor);
+
+const nomina = [];
+const estudiante = {
+    nombre: 'Agustín',
+    edad: 30,
+    cursos: 'Java Script',
 };
+const productoJSON = JSON.stringify(producto);
+localStorage.setItem('Producto1', productoJSON);
 
