@@ -1,5 +1,8 @@
 // Ejercicios Clase 11
 //-------------------------------------------------------------------------------------
+// Pendientes
+// 24, 29, 30
+//-------------------------------------------------------------------------------------
 // globales
 const cuerpo = document.body;
 // Ejercicios sobre el DOM
@@ -262,45 +265,220 @@ const cuerpo = document.body;
 // recuperado.textContent = `Desde Sesion Storage ${valorRLS}`;
 //-------------------------------------------------------------------------------------
 // Ejercicio 15: Guarda un objeto en el Local Storage y recupéralo, mostrando sus propiedades en un div.
-const producto = {
-    nombre: 'Agustín',
-    apellido: 'Bustamante',
-    edad: 30,
-    cursos: 'Java Script',
+// const producto = {
+//     nombre: 'Agustín',
+//     apellido: 'Bustamante',
+//     edad: 30,
+//     cursos: 'Java Script',
+// };
+// const productoJSON = JSON.stringify(producto);
+// localStorage.setItem('Producto1', productoJSON);
+
+// const productoRecuperdadoJSON = localStorage.getItem('Producto1');
+// const productoRecuperdado = JSON.parse(productoRecuperdadoJSON);
+
+// const div = document.createElement('div');
+// div.id= 'productoInfo';
+// cuerpo.appendChild(div);
+
+// const nombre = document.createElement('p');
+// nombre.textContent = `Nombre: ${productoRecuperdado.nombre}`;
+// div.appendChild(nombre);
+
+// const apellido = document.createElement('p');
+// apellido.textContent = `Apellido: ${productoRecuperdado.apellido}`;
+// div.appendChild(apellido);
+
+// const edad = document.createElement('p');
+// edad.textContent = `Edad: ${productoRecuperdado.edad}`;
+// div.appendChild(edad);
+
+// const cursos = document.createElement('p');
+// cursos.textContent = `Cursos: ${productoRecuperdado.cursos}`;
+// div.appendChild(cursos);
+//-------------------------------------------------------------------------------------
+// Ejercicio 16: Guarda un objeto en el Session Storage y recupéralo, mostrando sus propiedades en un div.
+// const alumno = {
+//     nombre: 'Agustín',
+//     apellido: 'Bustamante',
+//     edad: 30,
+//     cursos: 'Java Script',
+// };
+// const alumnoJSON = JSON.stringify(alumno);
+// localStorage.setItem('alumno1', alumnoJSON);
+
+// const producto = {
+//     nombre: 'Agustín',
+//     apellido: 'Bustamante',
+//     edad: 30,
+//     cursos: 'Java Script',
+// };
+// const productoJSON = JSON.stringify(producto);
+// localStorage.setItem('Producto1', productoJSON);
+
+
+// for(let i = 0; i < localStorage.length ; i++){
+//     let clave = localStorage.key(i);
+//     const div = document.createElement('div');
+//     div.textContent = clave;
+//     cuerpo.appendChild(div);
+// }
+
+//-------------------------------------------------------------------------------------
+// Ejercicio 17: Elimina un valor del Local Storage cuando se haga clic en un botón.
+// const alumno = {
+//     nombre: 'Agustín',
+//     apellido: 'Bustamante',
+//     edad: 30,
+//     cursos: 'Java Script',
+// };
+// const alumnoJSON = JSON.stringify(alumno);
+// localStorage.setItem('alumno1', alumnoJSON);
+
+// const botonEliminar = document.createElement('button');
+// botonEliminar.textContent = 'Eliminar';
+// cuerpo.appendChild(botonEliminar);
+// botonEliminar.addEventListener('click', eliminar );
+// function eliminar (){
+//     localStorage.removeItem('alumno1');
+// }
+//-------------------------------------------------------------------------------------
+// Ejercicio 18: Elimina un valor del Session Storage cuando se haga clic en un botón.
+////////////////////////////// PRÁCTICAMENTE IGUAL EJERCICIO 17 PERO CON SESSION STORAGE
+//-------------------------------------------------------------------------------------
+// Ejercicio 19: Guarda un array en el Local Storage y recupéralo, mostrando sus elementos en una lista.
+
+// Crear un array y guardarlo en el Local Storage
+// const cursos = ['JavaScript', 'HTML', 'CSS', 'React', 'Node.js'];
+// const cursosJSON = JSON.stringify(cursos);
+// localStorage.setItem('Cursos', cursosJSON);
+
+// // Recuperar el array del Local Storage
+// const cursosRecuperadosJSON = localStorage.getItem('Cursos');
+// const cursosRecuperados = JSON.parse(cursosRecuperadosJSON);
+
+// // Crear una lista (ul) y mostrar los elementos del array
+// const lista = document.createElement('ul');
+// cuerpo.appendChild(lista);
+
+// cursosRecuperados.forEach(curso => {
+//     const item = document.createElement('li');
+//     item.textContent = curso;
+//     lista.appendChild(item);
+// });
+//-------------------------------------------------------------------------------------
+// Ejercicio 20: Guarda un array en el Session Storage y recupéralo, mostrando sus elementos en una lista.
+////////////////////////////// PRÁCTICAMENTE IGUAL EJERCICIO 19 PERO CON SESSION STORAGE
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+// Ejercicios sobre Arrays
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+// Ejercicio 21: Crea un array de números y muéstralo en un div.
+// const div = document.createElement ('div');
+// cuerpo.appendChild(div);
+// const arrayNumerico = [1,2,3,4,5,6,7,8,9];
+// div.textContent = arrayNumerico;
+//-------------------------------------------------------------------------------------
+// Ejercicio 22: Añade un número al final de un array y muéstralo en un div.
+///////////////////// descomentar eje 21 para que funcione
+// const div2 = document.createElement ('div');
+// cuerpo.appendChild(div2);
+// arrayNumerico.push(10);
+// div2.textContent = arrayNumerico;
+//-------------------------------------------------------------------------------------
+// Ejercicio 23: Elimina el último número de un array y muéstralo en un div.
+///////////////////// descomentar eje 21, 22 para que funcione
+// const div3 = document.createElement ('div');
+// cuerpo.appendChild(div3);
+// arrayNumerico.pop();
+// div3.textContent = arrayNumerico;
+//-------------------------------------------------------------------------------------
+// Ejercicio 24: Ordena un array de números y muéstralo en un div.
+//-------------------------------------------------------------------------------------
+// Ejercicio 26: Filtra los números pares de un array y muéstralos en un div.
+///////////////////// descomentar eje 21, 22, 23  para que funcione
+// const div4 = document.createElement ('div');
+// cuerpo.appendChild(div4);
+// const numerosPares = arrayNumerico.filter(arrayNumerico => arrayNumerico % 2 === 0 );
+// div4.textContent = numerosPares;
+//-------------------------------------------------------------------------------------
+// Ejercicio 27: Suma los elementos de un array de números y muestra el resultado en un div.
+// const suma = numerosPares.reduce((i, numerosPares) => i +numerosPares, 0);
+// const div5 = document.createElement ('div');
+// div5.textContent = suma;
+// cuerpo.appendChild(div5);
+//-------------------------------------------------------------------------------------
+// Ejercicio 28: Multiplica los elementos de un array de números y muestra el resultado en un div.
+// const producto = numerosPares.reduce((i, numerosPares) => i * numerosPares, 1);
+// const div6 = document.createElement ('div');
+// div6.textContent = producto;
+// cuerpo.appendChild(div6);
+//-------------------------------------------------------------------------------------
+// Ejercicio 29: Usa map para crear un nuevo array duplicando los valores de un array original y muéstralo en un div.
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+// Ejercicios sobre Objetos
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+// Ejercicio 31: Crea un objeto con propiedades de un estudiante (nombre, edad, curso) y muéstralo en un div.
+// const estudiante = {
+//     nombre: 'Agustin',
+//     edad: 31,
+//     curso: 'Java Script',
+// }
+// const div = document.createElement('div');
+// div.textContent = `Nombre: ${estudiante.nombre}, Edad: ${estudiante.edad}, Curso: ${estudiante.curso} `
+// cuerpo.appendChild(div);
+// //-------------------------------------------------------------------------------------
+// // Ejercicio 32: Añade una propiedad a un objeto existente y muéstralo en un div.
+// estudiante.apellido = 'Bustamante';
+// estudiante.curso = 'Desarrollo Web'
+// const actuEstudiante = document.createElement('div');
+// actuEstudiante.textContent = `Nombre: ${estudiante.nombre}, Edad: ${estudiante.edad}, Curso: ${estudiante.curso}, Apellido: ${estudiante.apellido} `
+// cuerpo.appendChild(actuEstudiante);
+// //-------------------------------------------------------------------------------------
+// // Ejercicio 33: Elimina una propiedad de un objeto y muéstralo en un div.
+// const propieEliminada = document.createElement('div');
+// delete estudiante.edad;
+// propieEliminada.textContent =`Nombre: ${estudiante.nombre}, Edad: ${estudiante.edad}, Curso: ${estudiante.curso},`;
+// cuerpo.appendChild(propieEliminada);
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+// Ejercicios Integradores:
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+// Ejercicio 1: Gestión de Lista de Tareas
+//-------------------------------------------------------------------------------------
+// Crea una aplicación de lista de tareas donde los usuarios puedan agregar, eliminar y marcar tareas como completadas. Las tareas deben almacenarse en el Local Storage y recuperarse al cargar la página.
+
+const contenedorInput = document.createElement('div');
+cuerpo.appendChild(contenedorInput);
+
+const inputTareas = document.createElement('input');
+inputTareas.type = 'text';
+contenedorInput.appendChild(inputTareas);
+
+const botonGuardar = document.createElement('button');
+botonGuardar.textContent = 'Guardar';
+contenedorInput.appendChild(botonGuardar);
+
+const listaTareas = document.createElement('ul');
+contenedorInput.appendChild(listaTareas);
+
+botonGuardar.addEventListener('click', guardar);
+function guardar () {
+    const nroTarea = document.createElement('li');
+    nroTarea.textContent = inputTareas.value;
+    contenedorInput.appendChild(nroTarea);
+
+    const botonEliminar = document.createElement('button');
+    botonEliminar.textContent = 'Eliminar Tarea';
+    botonEliminar.style.marginLeft = '10px';
+    nroTarea.appendChild(botonEliminar);
 };
-const productoJSON = JSON.stringify(producto);
-localStorage.setItem('Producto1', productoJSON);
 
-const productoRecuperdadoJSON = localStorage.getItem('Producto1');
-const productoRecuperdado = JSON.parse(productoRecuperdadoJSON);
-
-const div = document.createElement('div');
-div.id= 'productoInfo';
-cuerpo.appendChild(div);
-
-const nombre = document.createElement('p');
-nombre.textContent = `Nombre: ${productoRecuperdado.nombre}`;
-div.appendChild(nombre);
-
-const apellido = document.createElement('p');
-apellido.textContent = `Apellido: ${productoRecuperdado.apellido}`;
-div.appendChild(apellido);
-
-const edad = document.createElement('p');
-edad.textContent = `Edad: ${productoRecuperdado.edad}`;
-div.appendChild(edad);
-
-const cursos = document.createElement('p');
-cursos.textContent = `Cursos: ${productoRecuperdado.cursos}`;
-div.appendChild(cursos);
-
-
-//-------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------
