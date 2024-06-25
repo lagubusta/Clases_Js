@@ -593,7 +593,7 @@ const estudiante = {
     nombre: 'Agustín',
     edad: 30,
     cursos: 'Java Script',
-    
+
 };
 
 //------------ Contendeor Tabla
@@ -609,7 +609,8 @@ tablaNomina.appendChild(encabezado);
 //-Encabezado fila
 const filaEncabezado = document.createElement('tr');
 encabezado.appendChild(filaEncabezado);
-//- Que se agregue encabezado en caso que el objeto estudiante tenga una nueva propiedad. Por ejemmplo, si agreguo apellido, se va a agregar un nuevo "encabezdo" y columna a la tabla.
+//-Generar Encabezados
+//Que se agregue encabezado en caso que el objeto estudiante tenga una nueva propiedad. Por ejemmplo, si agreguo apellido, se va a agregar un nuevo "encabezdo" y columna a la tabla.
 for (const propiedad in estudiante) {
     if (estudiante.hasOwnProperty(propiedad)) {
         const encabe = document.createElement('th');
@@ -617,7 +618,7 @@ for (const propiedad in estudiante) {
         filaEncabezado.appendChild(encabe);
     }
 };
-
+//-Generar Encabezados
 
 
 
