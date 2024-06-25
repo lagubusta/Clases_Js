@@ -543,16 +543,94 @@ cuerpo.style.backgroundColor = 'grey';
 // Ejercicio 2: Registro de Estudiantes
 // Desarrolla una aplicación para registrar estudiantes con nombre, edad y curso. Los datos deben almacenarse en el Local Storage y mostrarse en una tabla. Debe permitir editar y eliminar estudiantes.
 
-const contenedor =document.createElement('div');
-contenedor.textContent = 'hola';
+// Div Contenedor Sections  
+const contenedor = document.createElement('div');
 cuerpo.appendChild(contenedor);
+
+//------------ Nombre
+//-Section
+const sNombre = document.createElement('section');
+sNombre.id = 'IdsNombre';
+sNombre.textContent = 'Nombre:';
+contenedor.appendChild(sNombre);
+//-Input
+const inNombre = document.createElement('input');
+inNombre.type= 'text';
+sNombre.appendChild(inNombre);
+//------------ Nombre
+//------------ Edad
+//-Section
+const sEdad = document.createElement('section');
+sEdad.id = 'IdsEdad';
+sEdad.textContent = 'Edad:';
+contenedor.appendChild(sEdad);
+//-Input
+const inEdad = document.createElement('input');
+inEdad.type= 'number';
+sEdad.appendChild(inEdad);
+//------------ Edad
+//------------ Curso
+//-Section
+const sCurso = document.createElement('section');
+sCurso.id = 'IdsCurso';
+sCurso.textContent = 'Curso:';
+contenedor.appendChild(sCurso);
+//-Input
+const inCurso = document.createElement('input');
+inCurso.type= 'text';
+sCurso.appendChild(inCurso);
+//------------ Curso
+
+//------------ Boton Guardar
+const guardarInfo = document.createElement('button');
+guardarInfo.textContent = 'Guardar';
+contenedor.appendChild(guardarInfo);
+//------------ Boton Guardar
 
 const nomina = [];
 const estudiante = {
+    id: 1,
     nombre: 'Agustín',
     edad: 30,
     cursos: 'Java Script',
+    
 };
-const productoJSON = JSON.stringify(producto);
-localStorage.setItem('Producto1', productoJSON);
+
+//------------ Contendeor Tabla
+const contenedorTabla = document.createElement('div');
+contenedor.appendChild(contenedorTabla);
+//------------ Contendeor Tabla
+const tablaNomina = document.createElement('table');
+contenedorTabla.appendChild(tablaNomina);
+//------------Creacion tabla
+//-Encabezado tabla
+const encabezado = document.createElement('thead');
+tablaNomina.appendChild(encabezado);
+//-Encabezado fila
+const filaEncabezado = document.createElement('tr');
+encabezado.appendChild(filaEncabezado);
+//- Que se agregue encabezado en caso que el objeto estudiante tenga una nueva propiedad. Por ejemmplo, si agreguo apellido, se va a agregar un nuevo "encabezdo" y columna a la tabla.
+for (const propiedad in estudiante) {
+    if (estudiante.hasOwnProperty(propiedad)) {
+        const encabe = document.createElement('th');
+        encabe.textContent = propiedad.toUpperCase();
+        filaEncabezado.appendChild(encabe);
+    }
+};
+
+
+
+
+
+
+
+
+console.log(estudiante);
+console.log(nomina);
+
+
+
+// const productoJSON = JSON.stringify(producto);
+// localStorage.setItem('Producto1', productoJSON);
+
 
