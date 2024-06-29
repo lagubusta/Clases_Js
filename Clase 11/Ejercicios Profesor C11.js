@@ -4,8 +4,8 @@
 // 24, 29, 30
 //-------------------------------------------------------------------------------------
 // globales
-const cuerpo = document.body;
-cuerpo.style.backgroundColor = 'grey';
+// const cuerpo = document.body;
+// cuerpo.style.backgroundColor = 'grey';
 
 // Ejercicios sobre el DOM
 //-------------------------------------------------------------------------------------
