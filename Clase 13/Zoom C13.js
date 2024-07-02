@@ -27,6 +27,7 @@ const alumno = {
     }
 }
 console.log(alumno);
+
 const alumnoDePrueba = {
     ... alumno,
     email: "agusbusta10@gmail.com",

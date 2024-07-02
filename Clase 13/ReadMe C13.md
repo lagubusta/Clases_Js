@@ -3,8 +3,6 @@
 ## Spread ...
 - Sirve para "desparramar" todo el contenido del array y que lo use para algo.
 - En este caso sacmos todo el contendio del array numeros para que me diga cual es el numero maximo.
-
-
 ```js
 const numeros =[1,2,3,45,6,76,8,98];
 console.log(Mat.max(numeros));
@@ -60,5 +58,16 @@ console.log(alumno);
 const alumnoDePrueba = {
     ... alumno
 }
+
 console.log(alumnoDePrueba);
+// Imprime
+// {nombre: 'Agustin', edad: 30, nacionalidad: 'Agentina', cursos: {…}, email: 'agusbusta10@gmail.com', …}
+```
+Puedo agregarle mas atributos.
+```js
+const alumnoDePrueba = {
+    ... alumno,
+    email: "agusbusta10@gmail.com",
+    ojos: "Verdes",
+}
 ```

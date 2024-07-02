@@ -44,7 +44,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js">
 Ahora, podemos disparar *alertas* a través del método **.fire** del objeto global Swal:
 El método recibe un objeto por parámetro. Puede recibir distintas propiedades y valores, generando distintos resultados. Esto nos permite customizar la alerta 
 
-### PARA CAMBIAR EL COLOR DE UNA LIBRERIA, POR EJEMPLO COLOR, INSPECCIONO EL CODIGO EN EL NAVEDADOR, COPIO LA CLASE DE LO QEU QUIERO MODIFICAR. VOY AL CSS, CAMBIO EL BACKGROUND COLOR Y Y SE LO MODIFICO, DESPUES DEL "CODIGO" TENGO QUE PONER !important  SINO NO LO VA A TOMAR.
+### PARA CAMBIAR EL COLOR DE UNA LIBRERIA, POR EJEMPLO COLOR, INSPECCIONO EL CODIGO EN EL NAVEDADOR, COPIO LA CLASE DE LO QUE QUIERO MODIFICAR. VOY AL CSS, CAMBIO EL BACKGROUND COLOR Y Y SE LO MODIFICO, DESPUES DEL "CODIGO" TENGO QUE PONER !important  SINO NO LO VA A TOMAR.
 
 - Esta libreria puede ser un objeto, entonces yo le puedo ir agregando o sacndo cosas.
 - Caso por defecto.
