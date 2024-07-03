@@ -1,0 +1,23 @@
+{
+  "name": "clases_js",
+  "version": "1.0.0",
+  "description": "Proyecto de comosion de js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lagubusta/Clases_Js.git"
+  },
+  "author": "Agustin Bustamante",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lagubusta/Clases_Js/issues"
+  },
+  "homepage": "https://github.com/lagubusta/Clases_Js#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "express": "^4.19.2"
+  }
+}
